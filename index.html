@@ -22,20 +22,17 @@
       --navy: #11102b; --purple: #2b2560; --gold: #c9a84c; --gold-lt: #f0d078;
       --cream: #f9f6ef; --slate: #4a4a6a; --light: #f4f3fb; --white: #ffffff; --red: #b94040;
     }
-
-    /* NAV */
     .nav { background: var(--navy); padding: 18px 28px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
     .nav__brand { color: var(--gold); font-family: 'Georgia', serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.04em; }
     .nav__brand small { display: block; font-size: 0.6rem; color: rgba(255,255,255,0.45); font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; font-family: Arial, sans-serif; }
     .nav__cta { background: var(--gold); color: var(--navy); font-family: Arial, sans-serif; font-size: 0.78rem; font-weight: 700; padding: 9px 20px; border-radius: 6px; letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap; }
-
-    /* HERO */
     .hero { background: linear-gradient(160deg, #0a091f 0%, #1a1640 55%, #2b2560 100%); color: #fff; padding: 100px 0 80px; text-align: center; position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; top: -120px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%); pointer-events: none; }
     .hero__tag { display: inline-block; border: 1px solid rgba(201,168,76,0.5); color: var(--gold); font-family: Arial, sans-serif; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; padding: 6px 18px; border-radius: 100px; margin-bottom: 32px; }
     .hero h1 { font-size: clamp(1.9rem, 5vw, 3.1rem); color: #fff; max-width: 700px; margin: 0 auto 22px; font-weight: 700; }
     .hero h1 em { color: var(--gold); font-style: normal; }
-    .hero__sub { font-size: clamp(0.97rem, 2.2vw, 1.15rem); color: rgba(255,255,255,0.78); max-width: 560px; margin: 0 auto 44px; font-family: Arial, sans-serif; line-height: 1.65; }
+    .hero__sub { font-size: clamp(0.97rem, 2.2vw, 1.15rem); color: rgba(255,255,255,0.78); max-width: 560px; margin: 0 auto 12px; font-family: Arial, sans-serif; line-height: 1.65; }
+    .hero__price-line { font-family: Arial, sans-serif; font-size: clamp(0.88rem, 2vw, 1.02rem); color: rgba(255,255,255,0.62); max-width: 560px; margin: 0 auto 44px; }
     .btn-gold { display: inline-block; background: var(--gold); color: var(--navy); font-family: Arial, sans-serif; font-weight: 700; font-size: 1rem; padding: 18px 46px; border-radius: 8px; letter-spacing: 0.01em; border: none; transition: background 0.2s, transform 0.15s; }
     .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); }
     .btn-navy { display: inline-block; background: var(--navy); color: var(--gold); font-family: Arial, sans-serif; font-weight: 700; font-size: 1rem; padding: 18px 46px; border-radius: 8px; letter-spacing: 0.01em; border: 2px solid var(--gold); transition: background 0.2s, transform 0.15s; }
@@ -45,21 +42,17 @@
     .hero__author-badge { width: 50px; height: 50px; border-radius: 50%; background: rgba(201,168,76,0.18); border: 2px solid var(--gold); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
     .hero__author-name { font-size: 0.88rem; font-weight: 700; color: #fff; font-family: Arial, sans-serif; }
     .hero__author-title { font-size: 0.72rem; color: rgba(255,255,255,0.5); font-family: Arial, sans-serif; letter-spacing: 0.04em; text-transform: uppercase; }
-
-    /* TRUST STRIP */
     .trust-strip { background: var(--navy); border-top: 1px solid rgba(201,168,76,0.2); border-bottom: 1px solid rgba(201,168,76,0.2); padding: 20px 28px; }
     .trust-strip__inner { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
     .trust-item { display: flex; align-items: center; gap: 9px; font-family: Arial, sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.6); letter-spacing: 0.04em; text-transform: uppercase; }
     .trust-item__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
-
-    /* ASSESSMENT / QUIZ */
     .assessment { background: var(--cream); }
     .assessment__intro { text-align: center; margin-bottom: 52px; }
     .assessment__intro h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); color: var(--navy); margin-bottom: 14px; }
     .assessment__intro p { color: var(--slate); font-family: Arial, sans-serif; font-size: 1rem; max-width: 560px; margin: 0 auto; }
     .quiz { background: #fff; border-radius: 18px; box-shadow: 0 8px 48px rgba(17,16,43,0.10); max-width: 640px; margin: 0 auto; overflow: hidden; }
     .quiz__progress-bar-wrap { height: 4px; background: #e8e5f5; }
-    .quiz__progress-bar { height: 4px; background: var(--gold); transition: width 0.4s; width: 10%; }
+    .quiz__progress-bar { height: 4px; background: var(--gold); transition: width 0.4s; width: 33%; }
     .quiz__header { background: var(--navy); padding: 22px 32px; display: flex; align-items: center; justify-content: space-between; }
     .quiz__step-label { font-family: Arial, sans-serif; font-size: 0.72rem; color: rgba(255,255,255,0.5); letter-spacing: 0.1em; text-transform: uppercase; }
     .quiz__step-count { font-family: Arial, sans-serif; font-size: 0.72rem; color: var(--gold); font-weight: 700; }
@@ -73,22 +66,9 @@
     .quiz__back { background: none; border: 1px solid #d0cce8; color: var(--slate); font-family: Arial, sans-serif; font-size: 0.82rem; padding: 10px 20px; border-radius: 6px; }
     .quiz__next { background: var(--navy); color: var(--gold); font-family: Arial, sans-serif; font-weight: 700; font-size: 0.92rem; padding: 13px 30px; border-radius: 8px; border: none; }
     .quiz__next:disabled { opacity: 0.35; cursor: default; }
-
-    /* CAPTURE FORM */
     .quiz__capture { padding: 32px; }
     .quiz__capture h3 { font-size: 1.2rem; color: var(--navy); margin-bottom: 8px; font-family: 'Georgia', serif; }
     .quiz__capture p { font-family: Arial, sans-serif; font-size: 0.9rem; color: var(--slate); margin-bottom: 24px; }
-    .fgroup { margin-bottom: 18px; }
-    .fgroup label { display: block; font-family: Arial, sans-serif; font-size: 0.75rem; font-weight: 700; color: var(--purple); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
-    .fgroup input, .fgroup select { width: 100%; padding: 13px 15px; border: 2px solid #ddd9f0; border-radius: 8px; font-size: 0.97rem; font-family: Arial, sans-serif; color: #1c1c2e; background: #fdfdff; outline: none; transition: border-color 0.18s; }
-    .fgroup input:focus, .fgroup select:focus { border-color: var(--gold); }
-    .fgroup input::placeholder { color: #b8b5d0; }
-    .fgroup--row { display: grid; grid-template-columns: 120px 1fr; gap: 10px; }
-    .req { color: var(--red); margin-left: 2px; }
-    .opt-label { color: #aaa; font-weight: 400; font-size: 0.7rem; margin-left: 6px; text-transform: none; letter-spacing: 0; }
-
-
-    /* RESULTS */
     #results-section { background: var(--light); display: none; }
     .results-box { background: #fff; border-radius: 18px; box-shadow: 0 8px 48px rgba(17,16,43,0.10); max-width: 640px; margin: 0 auto; padding: 40px 36px; }
     .results-badge { display: inline-flex; align-items: center; gap: 10px; background: var(--navy); color: var(--gold); font-family: Arial, sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 18px; border-radius: 100px; margin-bottom: 22px; }
@@ -99,10 +79,6 @@
     .action-card__text { font-family: Arial, sans-serif; font-size: 0.92rem; color: #333; line-height: 1.55; }
     .results-next { margin-top: 30px; text-align: center; }
     .results-next p { font-family: Arial, sans-serif; font-size: 0.88rem; color: var(--slate); margin-bottom: 18px; }
-
-
-
-    /* BOOK INTRO */
     .book-intro { background: var(--cream); }
     .book-intro__grid { display: grid; grid-template-columns: 220px 1fr; gap: 52px; align-items: start; }
     .book-cover-img { width: 220px; border-radius: 6px; box-shadow: 16px 16px 40px rgba(0,0,0,0.35); flex-shrink: 0; display: block; }
@@ -112,13 +88,9 @@
     .book-topics li { display: flex; align-items: flex-start; gap: 12px; font-family: Arial, sans-serif; font-size: 0.92rem; color: #333; padding: 8px 0; border-bottom: 1px solid #ece9f8; line-height: 1.5; }
     .book-topics li:last-child { border-bottom: none; }
     .book-topics__dot { flex-shrink: 0; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); margin-top: 7px; }
-
-    /* SCRIPTURE */
     .scripture { background: var(--white); border-top: 1px solid #e8e5f5; border-bottom: 1px solid #e8e5f5; padding: 52px 28px; text-align: center; }
     .scripture blockquote { font-size: clamp(1.1rem, 2.5vw, 1.35rem); font-style: italic; color: var(--purple); max-width: 640px; margin: 0 auto 12px; line-height: 1.6; }
     .scripture cite { font-family: Arial, sans-serif; font-size: 0.8rem; color: #999; font-style: normal; letter-spacing: 0.07em; }
-
-    /* PREVIEW / SAMPLE PAGES */
     .preview { background: var(--white); }
     .preview h2 { font-size: clamp(1.4rem, 3vw, 2rem); color: var(--navy); margin-bottom: 10px; text-align: center; }
     .preview__sub { text-align: center; font-family: Arial, sans-serif; font-size: 0.97rem; color: var(--slate); max-width: 500px; margin: 0 auto 52px; }
@@ -127,30 +99,16 @@
     .preview-card__icon { font-size: 1.6rem; margin-bottom: 12px; }
     .preview-card h3 { font-family: Arial, sans-serif; font-size: 0.97rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
     .preview-card p { font-family: Arial, sans-serif; font-size: 0.86rem; color: var(--slate); line-height: 1.6; margin: 0; }
-
-    /* SAMPLE PAGE IMAGES */
     .sample-pages { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 40px; }
     .sample-page-wrap { border-radius: 12px; overflow: hidden; box-shadow: 0 6px 32px rgba(17,16,43,0.12); }
     .sample-page-wrap img { width: 100%; height: auto; display: block; }
     .sample-page-label { background: var(--navy); color: var(--gold); font-family: Arial, sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 14px; text-align: center; }
-
-    /* COVER DETAIL CARD — shown only if cover img fails */
-    .book-cover-fallback { width: 220px; height: 300px; background: linear-gradient(145deg, #11102b, #2b2560); border-radius: 6px; border-left: 5px solid var(--gold); box-shadow: 16px 16px 40px rgba(0,0,0,0.35); display: none; flex-direction: column; align-items: center; justify-content: center; padding: 22px 16px; text-align: center; flex-shrink: 0; }
-    .book-cover-fallback__tag { font-family: Arial, sans-serif; font-size: 0.58rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 12px; }
-    .book-cover-fallback__title { font-family: 'Georgia', serif; font-size: 0.88rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; line-height: 1.4; margin-bottom: 6px; }
-    .book-cover-fallback__subtitle { font-family: 'Georgia', serif; font-size: 0.72rem; color: rgba(255,255,255,0.7); line-height: 1.4; margin-bottom: 14px; }
-    .book-cover-fallback__rule { width: 32px; height: 1px; background: rgba(201,168,76,0.45); margin: 0 auto 14px; }
-    .book-cover-fallback__author { font-family: Arial, sans-serif; font-size: 0.62rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.1em; }
-
-    /* WHO IS THIS FOR */
     .who { background: var(--navy); color: #fff; }
     .who h2 { font-size: clamp(1.4rem, 3vw, 2rem); color: var(--gold); margin-bottom: 12px; text-align: center; }
     .who__sub { text-align: center; font-family: Arial, sans-serif; font-size: 0.97rem; color: rgba(255,255,255,0.6); max-width: 500px; margin: 0 auto 48px; }
     .who__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
     .who-item { display: flex; align-items: flex-start; gap: 14px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 18px 20px; font-family: Arial, sans-serif; font-size: 0.91rem; color: rgba(255,255,255,0.85); line-height: 1.5; }
     .who-item__icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
-
-    /* FINAL OFFER */
     .offer { background: linear-gradient(160deg, #0a091f 0%, #1a1640 55%, #2b2560 100%); color: #fff; text-align: center; }
     .offer__tag { display: inline-block; border: 1px solid rgba(201,168,76,0.45); color: var(--gold); font-family: Arial, sans-serif; font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; padding: 5px 16px; border-radius: 100px; margin-bottom: 24px; }
     .offer h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); color: #fff; max-width: 620px; margin: 0 auto 18px; }
@@ -163,26 +121,17 @@
     .offer__check { width: 22px; height: 22px; border-radius: 50%; background: var(--gold); display: flex; align-items: center; justify-content: center; color: var(--navy); font-size: 0.72rem; font-weight: 700; flex-shrink: 0; }
     .offer__cta-group { display: flex; flex-direction: column; align-items: center; gap: 14px; }
     .offer__meta { font-family: Arial, sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.38); margin-top: 6px; }
-
-    /* FOOTER */
     footer { background: #070616; color: rgba(255,255,255,0.28); text-align: center; padding: 32px 24px; font-family: Arial, sans-serif; font-size: 0.74rem; line-height: 1.8; }
     footer a { color: rgba(255,255,255,0.45); text-decoration: underline; }
     footer strong { color: rgba(255,255,255,0.55); }
-
-    /* UTILITIES */
     .text-center { text-align: center; }
     .hidden { display: none !important; }
-
-    /* MOBILE */
     @media (max-width: 680px) {
       .sec { padding: 56px 0; }
       .nav { padding: 14px 18px; }
-      .nav__brand { font-size: 0.88rem; }
-      .nav__cta { font-size: 0.72rem; padding: 8px 14px; }
       .hero { padding: 72px 0 56px; }
       .book-intro__grid { grid-template-columns: 1fr; gap: 32px; }
       .book-cover-img { width: 180px; margin: 0 auto; }
-      .book-cover-fallback { width: 180px; height: 244px; margin: 0 auto; }
       .sample-pages { grid-template-columns: 1fr; gap: 20px; }
       .quiz__body { padding: 24px 18px 18px; }
       .quiz__footer { padding: 0 18px 24px; }
@@ -190,54 +139,42 @@
       .results-box { padding: 28px 20px; }
       .btn-gold, .btn-navy { padding: 16px 28px; font-size: 0.95rem; width: 100%; text-align: center; }
       .offer__price { font-size: 2.4rem; }
-      .fgroup--row { grid-template-columns: 100px 1fr; }
       .preview__grid { grid-template-columns: 1fr; }
       .who__grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 420px) {
-      .hero h1 { font-size: 1.7rem; }
-      .trust-strip__inner { gap: 16px; }
-      .trust-item { font-size: 0.68rem; }
     }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav class="nav">
-  <div class="nav__brand">
-    Kingdom Mindset Co
-    <small>by Rahiem Hickmon</small>
-  </div>
+  <div class="nav__brand">Kingdom Mindset Co<small>by Rahiem Hickmon</small></div>
   <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=jd2nJ&qty%5Bjd2nJ%5D=1" target="_blank" rel="noopener" class="nav__cta">Get the Book</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="wrap">
     <div class="hero__tag">Digital Ebook &bull; Instant Download &bull; Available Worldwide</div>
     <h1>Think Better.<br><em>Live Wiser.</em></h1>
     <p class="hero__sub">A practical, faith-rooted guide to sharper decisions, stronger habits, and a life built on purpose — not just potential.</p>
-    <p class="hero__sub" style="margin-top:-28px;font-size:clamp(0.88rem,2vw,1.02rem);color:rgba(255,255,255,0.62);">For less than your next meal out, get the mindset shift that changes how you think, decide, and live. Just $14.99.</p>
-    <a href="#assessment" class="btn-gold">Take the Free Kingdom Mindset Assessment &darr;</a>
-    <p class="hero__trust">2 minutes &bull; Honest answers only &bull; Your results are personal and private</p>
+    <p class="hero__price-line">For less than your next meal out, get the mindset shift that changes how you think, decide, and live. Just $14.99.</p>
+    <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=jd2nJ&qty%5Bjd2nJ%5D=1" target="_blank" rel="noopener" class="btn-gold">Get the Book — $14.99</a>
+    <p class="hero__trust">Instant download &bull; Read on any device &bull; Available globally</p>
     <div class="hero__author">
-      <div class="hero__author-badge">&#9812;</div>
+      <div class="hero__author-badge">&#9998;</div>
       <div>
         <div class="hero__author-name">Rahiem Hickmon</div>
-        <div class="hero__author-title">Author &bull; Kingdom Mindset Co</div>
+        <div class="hero__author-title">Founder, Kingdom Mindset Co</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TRUST STRIP -->
 <div class="trust-strip">
   <div class="trust-strip__inner">
     <div class="trust-item"><div class="trust-item__dot"></div>Faith-Centered</div>
     <div class="trust-item"><div class="trust-item__dot"></div>Practical &amp; Actionable</div>
-    <div class="trust-item"><div class="trust-item__dot"></div>Instant Digital Download</div>
-    <div class="trust-item"><div class="trust-item__dot"></div>Secure Checkout via Payhip</div>
+    <div class="trust-item"><div class="trust-item__dot"></div>Instant Download</div>
+    <div class="trust-item"><div class="trust-item__dot"></div>Available Worldwide</div>
   </div>
 </div>
 
@@ -245,125 +182,53 @@
 <section class="assessment sec" id="assessment">
   <div class="wrap--narrow">
     <div class="assessment__intro">
-      <h2>What is your primary growth area?</h2>
-      <p>Nine quick questions. Honest answers only. Your results are personal and private — and they will tell you exactly where to focus your energy next.</p>
+      <h2>Where Is Your Mindset Holding You Back?</h2>
+      <p>Answer 3 quick questions to find out where to focus your energy — then get the book that helps you shift it.</p>
     </div>
     <div class="quiz" id="quiz-box">
-      <div class="quiz__progress-bar-wrap"><div class="quiz__progress-bar" id="quiz-progress"></div></div>
+      <div class="quiz__progress-bar-wrap"><div class="quiz__progress-bar" id="quiz-bar"></div></div>
       <div class="quiz__header">
-        <span class="quiz__step-label">Kingdom Mindset Assessment</span>
-        <span class="quiz__step-count" id="quiz-count">1 of 9</span>
+        <span class="quiz__step-label">Question</span>
+        <span class="quiz__step-count" id="quiz-count">1 of 3</span>
       </div>
-      <div class="quiz__body" id="quiz-body"></div>
-      <div class="quiz__footer" id="quiz-footer">
-        <button class="quiz__back" onclick="quizBack()">Back</button>
+      <div class="quiz__body">
+        <p class="quiz__q" id="quiz-q"></p>
+        <div class="quiz__options" id="quiz-opts"></div>
+      </div>
+      <div class="quiz__footer">
+        <button class="quiz__back" id="quiz-back-btn" onclick="quizBack()" style="visibility:hidden;">Back</button>
         <button class="quiz__next" id="quiz-next-btn" onclick="quizNext()" disabled>Next &rarr;</button>
       </div>
     </div>
 
-    <!-- LEAD CAPTURE (shown after quiz, before results) -->
+    <!-- TALLY CAPTURE — shown after quiz -->
     <div class="quiz hidden" id="capture-box">
       <div class="quiz__progress-bar-wrap"><div class="quiz__progress-bar" style="width:100%;"></div></div>
       <div class="quiz__header">
         <span class="quiz__step-label">Almost there</span>
         <span class="quiz__step-count" style="color:var(--gold);">&#10003; Assessment Complete</span>
       </div>
-      <div class="quiz__capture" style="padding:0;">
-<iframe data-tally-src="https://tally.so/embed/kd8Zy6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" title="Kingdom Mindset Co — Stay Connected"></iframe>
-<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-        <h3>Your results are ready.</h3>
-        <p>Enter your details to see your primary growth area and receive your free Kingdom Mindset resources.</p>
-        <!-- Formspree form — replace YOUR_FORM_ID with your Formspree form ID -->
-        <div id="capture-form">
-          <input type="hidden" name="_subject" value="New Kingdom Mindset Assessment Submission" />
-          <input type="hidden" name="assessment_category" id="hidden-category" value="" />
-          <input type="hidden" name="assessment_category_label" id="hidden-category-label" value="" />
-          <div class="fgroup">
-            <label for="cap-name">First Name <span class="req">*</span></label>
-            <input type="text" id="cap-name" name="first_name" placeholder="Your first name" required autocomplete="given-name" />
-          </div>
-          <div class="fgroup">
-            <label for="cap-email">Email Address <span class="req">*</span></label>
-            <input type="email" id="cap-email" name="email" placeholder="your@email.com" required autocomplete="email" />
-          </div>
-          <div class="fgroup">
-            <label for="cap-phone">Mobile / WhatsApp <span class="opt-label">(optional)</span></label>
-            <div class="fgroup--row">
-              <select id="cap-country" name="phone_country_code" aria-label="Country code">
-                <option value="+1">+1 (US/CA)</option>
-                <option value="+44">+44 (UK)</option>
-                <option value="+234">+234 (NG)</option>
-                <option value="+233">+233 (GH)</option>
-                <option value="+254">+254 (KE)</option>
-                <option value="+27">+27 (ZA)</option>
-                <option value="+353">+353 (IE)</option>
-                <option value="+61">+61 (AU)</option>
-                <option value="+64">+64 (NZ)</option>
-                <option value="+91">+91 (IN)</option>
-                <option value="+49">+49 (DE)</option>
-                <option value="+33">+33 (FR)</option>
-                <option value="+55">+55 (BR)</option>
-                <option value="+52">+52 (MX)</option>
-                <option value="+1876">+1876 (JM)</option>
-                <option value="+1868">+1868 (TT)</option>
-                <option value="+1246">+1246 (BB)</option>
-                <option value="+other">Other</option>
-              </select>
-              <input type="tel" id="cap-phone" name="phone_number" placeholder="Phone number" autocomplete="tel" />
-            </div>
-          </div>
-          
-          
-          
-        </div>
+      <div class="quiz__capture">
+        <h3>You're one step away — get the book.</h3>
+        <p>Fill in your details below and get the book that shifts how you think, decide, and live.</p>
+        <iframe data-tally-src="https://tally.so/embed/kd8Zy6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" title="Kingdom Mindset Co — Stay Connected"></iframe>
+        <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
       </div>
     </div>
   </div>
 </section>
 
 <!-- RESULTS -->
-<section class="sec" id="results-section">
+<section class="sec hidden" id="results-section">
   <div class="wrap--narrow">
     <div class="results-box">
-      <div class="results-badge">&#9733; Your Primary Growth Area</div>
-      <div class="results-area" id="results-area-name"></div>
-      <div class="results-body" id="results-body-text"></div>
+      <div class="results-badge">&#9733; Your Kingdom Mindset Result</div>
+      <p class="results-area" id="results-area-name"></p>
+      <p class="results-body" id="results-body"></p>
       <div id="results-actions"></div>
       <div class="results-next">
-        <p>Your free resource is waiting. It is designed specifically for where you are right now.</p>
+        <p>The book that addresses this directly — and gives you the practical tools to shift it.</p>
         <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=jd2nJ&qty%5Bjd2nJ%5D=1" target="_blank" rel="noopener" class="btn-gold" style="font-size:0.92rem;padding:14px 32px;">Get the Book &mdash; $14.99 &rarr;</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FREE RESOURCE / MAGNET -->
-<!-- magnet section removed -->
-<section class="magnet sec" id="magnet" style="display:none!important;">
-  <div class="wrap">
-    <div class="magnet__inner">
-      <div>
-        <div class="magnet__badge">Free Resource</div>
-        <h2>Daily Mindset Reset &amp; Action Blueprint</h2>
-        <p class="magnet__sub">A practical daily framework to interrupt old patterns, reset your thinking, and take one focused action every day — starting today. Rooted in the same principles covered in <em>Critical Thinking: Think Better, Build Better.</em></p>
-        <ul class="magnet__list">
-          <li><span class="magnet__check">&#10003;</span>A daily reset ritual built on biblical discipline</li>
-          <li><span class="magnet__check">&#10003;</span>A one-page morning action framework you can start immediately</li>
-          <li><span class="magnet__check">&#10003;</span>Targeted reflection prompts aligned to your primary growth area</li>
-          <li><span class="magnet__check">&#10003;</span>A simple weekly money habit tracker grounded in stewardship</li>
-          <li><span class="magnet__check">&#10003;</span>Evening questions to close each day with clarity and intention</li>
-        </ul>
-        <!-- Replace BLUEPRINT_PDF_URL below with your hosted PDF link (e.g. Google Drive share link or Dropbox) -->
-        <a href="BLUEPRINT_PDF_URL" target="_blank" rel="noopener" class="btn-blueprint" id="blueprint-btn">&#8595;&nbsp; Download the Free Blueprint (PDF)</a>
-        <p class="magnet__note" style="margin-top:14px;">No additional sign-up needed. Yours to keep, free.</p>
-      </div>
-      <div class="magnet__visual">
-        <div class="magnet__doc-icon">&#128196;</div>
-        <div class="magnet__doc-title">Daily Mindset Reset<br>&amp; Action Blueprint</div>
-        <div style="width:40px;height:1px;background:rgba(201,168,76,0.4);margin:12px auto;"></div>
-        <div class="magnet__doc-sub">Kingdom Mindset Co</div>
-        <div class="magnet__note">by Rahiem Hickmon</div>
-<!-- MAGNET_END_MARKER -->
       </div>
     </div>
   </div>
@@ -373,142 +238,96 @@
 <section class="book-intro sec" id="book">
   <div class="wrap">
     <div class="book-intro__grid">
-      <!-- Book cover: Cover 1 (black, chess knight, gold/white) used as the hero cover -->
       <div>
-        <img
-          class="book-cover-img"
-          src="https://static.wixstatic.com/media/b4cdc1_7807849dd4e04378ac94c80ac8448c1d~mv2.jpg"
-          alt="Critical Thinking: Think Better, Build Better by Rahiem Hickmon — Kingdom Mindset Co"
-          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-        />
-        <!-- Fallback if image fails to load -->
-        <div class="book-cover-fallback" aria-hidden="true">
-          <div class="book-cover-fallback__tag">Rahiem Hickmon</div>
-          <div class="book-cover-fallback__title">Critical<br>Thinking</div>
-          <div class="book-cover-fallback__subtitle">Think Better,<br>Build Better</div>
-          <div class="book-cover-fallback__rule"></div>
-          <div class="book-cover-fallback__author">Kingdom Mindset Co</div>
-        </div>
+        <img src="https://static.wixstatic.com/media/b4cdc1_fe0aa4c9f4454b3caee4aba297b27e8b~mv2.jpg" alt="Think Better Live Wiser by Rahiem Hickmon — Kingdom Mindset Co" class="book-cover-img" onerror="this.style.display='none'" />
       </div>
       <div class="book-intro__content">
-        <h2>Critical Thinking:<br>Think Better, Build Better</h2>
-        <p>Most people are not held back by a lack of ambition. They are held back by the wrong thinking patterns. This book gives you the framework to identify, interrupt, and replace the mental habits keeping your life smaller than it was meant to be.</p>
+        <h2>A Book Built for the Person Who Is Ready to Think Differently</h2>
         <p>Grounded in biblical wisdom and written for real life — whether you are building a business, rebuilding after a setback, or simply trying to make better decisions every day — every chapter ends with steps you can apply immediately.</p>
         <ul class="book-topics">
-          <li><div class="book-topics__dot"></div>Why smart, motivated people keep making the same decisions</li>
-          <li><div class="book-topics__dot"></div>Biblical stewardship principles that change how you handle money</li>
-          <li><div class="book-topics__dot"></div>A step-by-step framework for renewing your mind and breaking old patterns</li>
-          <li><div class="book-topics__dot"></div>How to build discipline that holds even when motivation disappears</li>
-          <li><div class="book-topics__dot"></div>Practical exercises in critical thinking you will carry for the rest of your life</li>
+          <li><div class="book-topics__dot"></div>How to make sharper decisions under pressure</li>
+          <li><div class="book-topics__dot"></div>Breaking the patterns that keep you stuck</li>
+          <li><div class="book-topics__dot"></div>Building discipline that outlasts motivation</li>
+          <li><div class="book-topics__dot"></div>Aligning your faith with your everyday choices</li>
+          <li><div class="book-topics__dot"></div>Practical steps for purpose-driven living</li>
         </ul>
-        <a href="#preview" class="btn-navy" style="font-size:0.9rem;padding:14px 28px;">See Inside the Book &darr;</a>
+        <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=jd2nJ&qty%5Bjd2nJ%5D=1" target="_blank" rel="noopener" class="btn-gold" style="font-size:1rem;padding:18px 44px;">Get the Complete Book &mdash; $14.99 &rarr;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SCRIPTURE BANNER -->
 <div class="scripture">
-  <blockquote>"Do not conform to the pattern of this world, but be transformed by the renewing of your mind."</blockquote>
-  <cite>Romans 12:2</cite>
+  <div class="wrap--narrow">
+    <blockquote>"For as he thinketh in his heart, so is he."</blockquote>
+    <cite>Proverbs 23:7 &mdash; The foundation this book is built on</cite>
+  </div>
 </div>
 
-<!-- PREVIEW / SAMPLE PAGES -->
-<section class="preview sec" id="preview">
+<!-- PREVIEW -->
+<section class="preview sec">
   <div class="wrap">
-    <h2>A look inside the book</h2>
-    <p class="preview__sub">Real content. Real application. Here is a feel for what you will be reading.</p>
-
-    <!-- Cover 3 (dark green/brain/pillars) used as the primary visual for the preview section -->
-    <div class="sample-pages">
-      <div class="sample-page-wrap">
-        <img
-          src="https://static.wixstatic.com/media/b4cdc1_5346200a68ad44c0b06ad688d5712305~mv2.jpg"
-          alt="Critical Thinking book cover — Faith, Focus, Discipline, Financial Wisdom, Entrepreneurship"
-        />
-        <div class="sample-page-label">Book Cover — Full Detail</div>
-      </div>
-      <div class="sample-page-wrap">
-        <img
-          src="https://static.wixstatic.com/media/b4cdc1_fb47a9ab546f43428cb7750d16a2aea5~mv2.jpg"
-          alt="Critical Thinking book — alternate cover"
-        />
-        <div class="sample-page-label">Inside the Book</div>
-      </div>
-    </div>
-
-    <!-- What is inside — chapter themes -->
+    <h2>What You Will Find Inside</h2>
+    <p class="preview__sub">Practical chapters built around the mindset shifts that actually change how you live, decide, and build.</p>
     <div class="preview__grid">
       <div class="preview-card">
         <div class="preview-card__icon">&#129504;</div>
-        <h3>The Thinking Trap</h3>
-        <p>Why smart people make poor decisions — and the specific thought patterns that keep you stuck in cycles you cannot seem to break no matter how hard you try.</p>
+        <h3>Critical Thinking</h3>
+        <p>How to slow down, question your assumptions, and make decisions you can stand behind.</p>
+      </div>
+      <div class="preview-card">
+        <div class="preview-card__icon">&#128167;</div>
+        <h3>Discipline Over Motivation</h3>
+        <p>Why motivation fails you and what to build instead — a system that works even on hard days.</p>
+      </div>
+      <div class="preview-card">
+        <div class="preview-card__icon">&#127775;</div>
+        <h3>Purpose &amp; Intentional Living</h3>
+        <p>How to stop drifting and start building a life that reflects what you actually believe.</p>
       </div>
       <div class="preview-card">
         <div class="preview-card__icon">&#128176;</div>
-        <h3>Money &amp; Stewardship</h3>
-        <p>A practical, faith-grounded approach to budgeting, spending, and building financial stability — without shame, confusion, or complicated systems.</p>
-      </div>
-      <div class="preview-card">
-        <div class="preview-card__icon">&#9201;</div>
-        <h3>Discipline Over Motivation</h3>
-        <p>The system that keeps you moving on the days when inspiration is gone — and how to build it into your daily routine so it holds for the long term.</p>
-      </div>
-      <div class="preview-card">
-        <div class="preview-card__icon">&#128218;</div>
-        <h3>Biblical Wisdom Applied</h3>
-        <p>Timeless principles from Scripture made operational — not as religious advice, but as real guidance for real decisions in real life.</p>
-      </div>
-      <div class="preview-card">
-        <div class="preview-card__icon">&#127919;</div>
-        <h3>Purpose &amp; Intentional Living</h3>
-        <p>How to stop drifting and start building toward something specific — with clarity about what you are building, why you are building it, and what the next step is.</p>
-      </div>
-      <div class="preview-card">
-        <div class="preview-card__icon">&#128200;</div>
-        <h3>Building &amp; Rebuilding</h3>
-        <p>Whether you are starting fresh or picking up after a setback, this section gives you a framework that meets you exactly where you are — not where you used to be.</p>
+        <h3>Financial Wisdom</h3>
+        <p>A faith-centered framework for money decisions that aligns with where you want to go.</p>
       </div>
     </div>
-
     <div class="text-center">
       <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=jd2nJ&qty%5Bjd2nJ%5D=1" target="_blank" rel="noopener" class="btn-gold" style="font-size:1rem;padding:18px 44px;">Get the Complete Book &mdash; $14.99 &rarr;</a>
-      <p style="font-family:Arial,sans-serif;font-size:0.74rem;color:#b0adc8;margin-top:12px;">Secure checkout via Payhip &bull; Instant digital download &bull; Available worldwide</p>
     </div>
   </div>
 </section>
 
-<!-- WHO IS THIS FOR -->
+<!-- WHO -->
 <section class="who sec">
   <div class="wrap">
-    <h2>This book is for you if&hellip;</h2>
-    <p class="who__sub">You do not need more motivation. You need a better framework for thinking, deciding, and building.</p>
+    <h2>This Book Is For You If...</h2>
+    <p class="who__sub">You do not need to have it all figured out. You just need to be ready to think differently.</p>
     <div class="who__grid">
-      <div class="who-item"><div class="who-item__icon">&#128172;</div>You make the same decisions and keep getting the same outcomes</div>
-      <div class="who-item"><div class="who-item__icon">&#128176;</div>You want your finances to reflect your faith, not just your feelings</div>
-      <div class="who-item"><div class="who-item__icon">&#128170;</div>You start strong but cannot stay consistent long enough to see results</div>
-      <div class="who-item"><div class="who-item__icon">&#127968;</div>You are rebuilding after a setback and need a framework that starts where you actually are</div>
-      <div class="who-item"><div class="who-item__icon">&#127775;</div>You believe there is a bigger version of your life — and you want tools to reach it</div>
-      <div class="who-item"><div class="who-item__icon">&#9996;</div>You want practical, faith-rooted guidance — not empty positivity or religious cliché</div>
+      <div class="who-item"><div class="who-item__icon">&#9989;</div>You feel stuck and are not sure why your effort is not producing results</div>
+      <div class="who-item"><div class="who-item__icon">&#9989;</div>You want your faith to actually shape how you live, work, and decide</div>
+      <div class="who-item"><div class="who-item__icon">&#9989;</div>You are building something and need a stronger mindset foundation</div>
+      <div class="who-item"><div class="who-item__icon">&#9989;</div>You are tired of starting strong and losing momentum before you finish</div>
+      <div class="who-item"><div class="who-item__icon">&#9989;</div>You want practical tools, not just inspiration</div>
+      <div class="who-item"><div class="who-item__icon">&#9989;</div>You are ready to stop thinking small and start living with intention</div>
     </div>
   </div>
 </section>
 
-<!-- FINAL OFFER / CTA -->
-<section class="offer sec" id="offer">
-  <div class="wrap">
-    <div class="offer__tag">One-Time Purchase &bull; Instant Access</div>
-    <h2>Your thinking shapes your life.<br>Let's change both.</h2>
-    <p class="offer__body">Critical Thinking: Think Better, Build Better is a permanent investment in the one thing that drives every other result — your mind. One purchase. Lifetime access. Start reading in minutes.</p>
+<!-- FINAL OFFER -->
+<section class="offer sec">
+  <div class="wrap--narrow">
+    <div class="offer__tag">Limited Time &bull; Digital Ebook</div>
+    <h2>Start Thinking Better Today</h2>
+    <p class="offer__body">For less than your next meal out, get the mindset shift that changes how you think, decide, and live.</p>
     <div class="offer__price-wrap">
       <span class="offer__price">$14.99</span>
       <span class="offer__price-note">one-time &bull; instant download</span>
     </div>
     <ul class="offer__includes">
-      <li><div class="offer__check">&#10003;</div>Complete ebook — Critical Thinking: Think Better, Build Better</li>
-      <li><div class="offer__check">&#10003;</div>Instant digital delivery via Payhip</li>
-      <li><div class="offer__check">&#10003;</div>Access on any device — phone, tablet, or computer</li>
+      <li><div class="offer__check">&#10003;</div>Full digital ebook — instant access</li>
+      <li><div class="offer__check">&#10003;</div>Practical action steps at the end of every chapter</li>
       <li><div class="offer__check">&#10003;</div>Faith-centered, practically structured, globally accessible</li>
+      <li><div class="offer__check">&#10003;</div>Read on any device, anywhere in the world</li>
     </ul>
     <div class="offer__cta-group">
       <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=jd2nJ&qty%5Bjd2nJ%5D=1" target="_blank" rel="noopener" class="btn-gold" style="font-size:1.08rem;padding:20px 56px;">Get Critical Thinking &mdash; $14.99 &rarr;</a>
@@ -517,287 +336,94 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p><strong>Kingdom Mindset Co</strong> &bull; by Rahiem Hickmon<br>
-  &copy; 2026 Kingdom Mindset Co. All rights reserved.<br>
-  <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=jd2nJ&qty%5Bjd2nJ%5D=1" target="_blank" rel="noopener">Get the Book &rarr;</a></p>
+  <p><strong>Kingdom Mindset Co</strong> &mdash; by Rahiem Hickmon</p>
+  <p style="margin-top:8px;">&copy; 2025 Kingdom Mindset Co. All rights reserved.</p>
 </footer>
 
-<!-- ============================================================
-     JAVASCRIPT — Quiz engine + Formspree lead capture
-     ============================================================ -->
 <script>
-(function() {
-
-  /* ── PAYHIP DIRECT CHECKOUT URL ── */
   var PAYHIP_URL = 'https://payhip.com/buy?s=1&cart_links%5B%5D=jd2nJ&qty%5Bjd2nJ%5D=1';
+  var current = 0;
+  var answers = [null, null, null];
 
-  /* ── FORMSPREE REMOVED ──
-     Replace YOUR_FORM_ID with your actual Formspree form ID.
-     Steps:
-       1. Go to formspree.io and sign up (free).
-       2. Create a new form — name it "Kingdom Mindset Leads".
-       3. Copy the form ID (the string after /f/ in your endpoint).
-       4. Replace YOUR_FORM_ID below.
-     All submissions will appear in your Formspree dashboard with
-     first_name, email, phone_country_code, phone_number,
-     assessment_category, and assessment_category_label columns.
-     Export as CSV any time from the Formspree dashboard.
-  */
-  /* Formspree removed — Tally handles all lead capture */
-
-  /* ── QUIZ QUESTIONS ── */
   var QS = [
     { q: "When you think about where you are financially right now, which of these feels most true?",
-      cat: "financial",
       opts: ["I earn money but it disappears too fast — I'm not sure where it goes", "I want to save and invest but I don't know how to start with what I have", "I have a plan but I don't stay consistent with it", "I know the right things to do financially — I just don't do them"] },
-    { q: "Discipline — the ability to do what you committed to even when you don't feel like it — is something you would describe as:",
-      cat: "discipline",
-      opts: ["Honestly, one of my biggest struggles — I start strong and fade", "Something I have in some areas but completely lose in others", "A work in progress — I'm better than I was but not where I want to be", "Decent, but I feel like I'm always fighting myself to maintain it"] },
     { q: "When it comes to your sense of purpose and direction in life right now, which is closest to where you are?",
-      cat: "purpose",
       opts: ["I know what I'm supposed to be doing but I haven't fully stepped into it yet", "I'm still figuring out what my purpose actually is", "I have a clear direction but something keeps pulling me off course", "I go through seasons where purpose feels clear and seasons where it completely disappears"] },
     { q: "How does your faith show up — or struggle to show up — in your everyday decisions?",
-      cat: "faith",
-      opts: ["I believe deeply but my daily habits don't always reflect what I believe", "My faith feels strong in church or prayer but disconnected from my work and money decisions", "I want my life to be more aligned with my values but I'm not sure how to close that gap", "I'm still working out what I actually believe and what that means for how I live"] },
-    { q: "If you're building or want to build something of your own, what's the biggest block?",
-      cat: "entrepreneurship",
-      opts: ["I don't know where to begin or what steps to take", "Fear of failure or what people will think stops me before I start", "I start ideas but can't stay consistent long enough to see results", "I haven't started anything — I'm not sure if I'm even cut out for it"] },
-    { q: "When something goes wrong — a setback, a failure, a lost opportunity — your typical pattern is:",
-      cat: "rebuilding",
-      opts: ["I bounce back, but it takes longer than I'd like", "I tend to replay what went wrong over and over instead of moving forward", "I shut down for a while before I can restart", "I'm currently in a season of rebuilding and not sure how to move forward"] },
-    { q: "Think about a goal you set in the last 12 months that you didn't reach. What happened?",
-      cat: "discipline",
-      opts: ["I started with energy but lost momentum before I got there", "Life got in the way and I never really got started", "I reached it partway but couldn't push through to completion", "I kept changing the goal before finishing it"] },
-    { q: "When it comes to your finances and your faith, which statement feels most honest?",
-      cat: "financial",
-      opts: ["I know Scripture teaches stewardship but I still struggle to apply it to my actual money", "I feel guilt or shame around money and I'd rather not think about it", "I believe God wants me to prosper but I haven't figured out the practical steps", "My money habits and my stated values are two completely different things"] },
-    { q: "What does your inner voice sound like most often when you face a significant decision or challenge?",
-      cat: "purpose",
-      opts: ["Doubt — 'What if this doesn't work? What if I'm not enough?'", "Confusion — 'I don't know what the right move is'", "Hesitation — 'I'll wait until I'm more ready'", "Distraction — 'Something else always feels more urgent'"] }
+      opts: ["I believe deeply but my daily habits don't always reflect what I believe", "My faith feels strong in church or prayer but disconnected from my work and money decisions", "I want my life to be more aligned with my values but I'm not sure how to close that gap", "I'm still working out what I actually believe and what that means for how I live"] }
   ];
 
-  /* ── RESULT PROFILES ── */
   var RESULTS = {
-    financial: {
-      name: "Financial Mindset & Stewardship",
-      body: "Money is one of the most practical expressions of your mindset. The patterns you identified point to a gap between what you want financially and the thinking habits driving your current results. This is not about income — it's about how you relate to money, what you believe about it, and the daily decisions that either build or erode stability.",
-      actions: [
-        { label: "What to focus on first", text: "Write down every dollar that came in and went out last week — no judgment, just clarity. Most financial change starts with an honest look, not a plan." },
-        { label: "The mindset shift that changes everything", text: "Stewardship is not restriction. It is intentional direction. Start treating every dollar as a resource to be directed, not just received." },
-        { label: "One daily habit to start today", text: "Spend 5 minutes every morning deciding one specific financial decision you will make differently today. Small, deliberate choices compound." }
-      ]
-    },
-    discipline: {
-      name: "Discipline & Consistency",
-      body: "Most people do not have a motivation problem. They have a system problem. When the feeling of wanting to do something fades — and it always fades — what's left has to be structure, not willpower. Your results suggest that building the infrastructure of discipline is your highest-leverage next step.",
-      actions: [
-        { label: "What to focus on first", text: "Identify one habit you've started and stopped three or more times. That is your proving ground. Start only that one — don't add others until it holds." },
-        { label: "The mindset shift that changes everything", text: "Discipline is not punishment. It is the structure that makes freedom possible. You are not restricting yourself — you are protecting the version of yourself that is trying to emerge." },
-        { label: "One daily habit to start today", text: "Set one non-negotiable daily anchor — something small, takes under 10 minutes, done at the same time every day. Let that become the cornerstone." }
-      ]
-    },
-    purpose: {
-      name: "Purpose & Direction",
-      body: "Knowing what you are supposed to do and actually living toward it are two very different things. Your results suggest there is a gap between the life you sense you are meant to build and the daily reality of how you are spending your time, energy, and decisions. Closing that gap requires clarity, not more inspiration.",
-      actions: [
-        { label: "What to focus on first", text: "Write one sentence: 'I believe I exist to ___.' Don't overthink it. Your first honest answer is your starting point, not your final answer." },
-        { label: "The mindset shift that changes everything", text: "Purpose is not found by waiting for a revelation. It is clarified through action. Every step you take toward something meaningful reveals more than any amount of reflection alone." },
-        { label: "One daily habit to start today", text: "At the end of each day, ask: 'Did what I spent my time on today move me toward or away from what I say matters most?' One honest answer a day builds direction." }
-      ]
-    },
-    faith: {
-      name: "Faith & Personal Growth",
-      body: "Knowing what you believe and living from it are two different things. Your results suggest there may be a gap between your faith foundation and how it's actually showing up in your daily decisions, habits, and direction. Closing that gap doesn't require more information — it requires intentional application.",
-      actions: [
-        { label: "What to focus on first", text: "Identify one area of your life — money, relationships, work — where your decisions don't yet reflect your stated values. That gap is your starting point." },
-        { label: "The mindset shift that changes everything", text: "Biblical wisdom is operational, not ornamental. The principles in Scripture around money, relationships, and purpose were designed to be applied, not just admired." },
-        { label: "One daily habit to start today", text: "Pick one principle you believe deeply and ask every morning: 'How does this show up in one decision I'll make today?' Start applying it before seeking more knowledge." }
-      ]
-    },
-    entrepreneurship: {
-      name: "Entrepreneurship & Action",
-      body: "The gap between wanting to build something and actually building it is almost never information. It is the willingness to move before you're ready, combined with a framework that turns that movement into momentum. Your results point to entrepreneurial drive that has yet to find its full structure and strategy.",
-      actions: [
-        { label: "What to focus on first", text: "Write down the one idea or project you have been sitting on longest. Give it a name. Then identify the single smallest step you could take on it tomorrow." },
-        { label: "The mindset shift that changes everything", text: "Starting imperfectly beats planning perfectly. Every business that exists started before it was ready. Execution builds the confidence that waiting destroys." },
-        { label: "One daily habit to start today", text: "Spend 30 minutes each day — no phone, no interruptions — working on your idea. Not researching it. Not thinking about it. Working on it." }
-      ]
-    },
-    rebuilding: {
-      name: "Rebuilding & Starting Over",
-      body: "A setback is not the end of the story — but it can feel like one if you're trying to pick up exactly where you left off. Your results suggest you may be in a season of rebuilding, which requires a different strategy than building from scratch: it requires processing what happened, stabilizing where you are, and building from a new and more informed foundation.",
-      actions: [
-        { label: "What to focus on first", text: "Give yourself permission to start from where you actually are — not where you were. Trying to leap from the fall directly to where you were going wastes energy that rebuilding requires." },
-        { label: "The mindset shift that changes everything", text: "What happened to you is information. The most resilient people are not those who avoided failure — they are those who extracted the most value from it and moved." },
-        { label: "One daily habit to start today", text: "Identify one small thing you can control today. Do it well. Rebuilding confidence comes from small, repeated evidence that you can follow through." }
-      ]
-    }
+    financial: { name: "Financial Mindset & Stewardship", body: "Money is one of the most practical tests of how we think. Your answers suggest that the gap between what you know and what you do is where your growth lives right now. This book addresses that gap directly.", actions: [{ label: "What to focus on first", text: "Start with the chapter on decision-making. Most financial struggles are not about money — they are about the thinking that happens before the money moves." }, { label: "The mindset shift that changes everything", text: "Stewardship is not restriction. It is alignment. When your money decisions match your values, everything else becomes clearer." }] },
+    purpose:    { name: "Purpose & Direction",            body: "You are in a season where clarity matters more than speed. The answers you gave suggest you know more than you think — you just need the right framework to act on it.", actions: [{ label: "What to focus on first", text: "Purpose is not found by waiting for a revelation. It is clarified through action. Every step toward something meaningful reveals more than reflection alone." }, { label: "The mindset shift that changes everything", text: "Direction is not a destination. It is a posture. This book will help you find yours." }] },
+    faith:      { name: "Faith & Personal Growth",        body: "You sense a gap between what you believe and how you live. That awareness is itself a sign of growth. This book was written for exactly that tension.", actions: [{ label: "What to focus on first", text: "Start with the chapters on intentional living and daily habits. Faith becomes practical when it shapes the small decisions, not just the big ones." }, { label: "The mindset shift that changes everything", text: "Integration is the goal — not just believing differently, but living differently because of what you believe." }] }
   };
 
-  /* ── QUIZ STATE ── */
-  var current = 0;
-  var answers = new Array(QS.length).fill(null);
-
-  function render() {
+  function renderStep() {
     var q = QS[current];
-    var pct = Math.round(((current + 1) / QS.length) * 100);
-    document.getElementById('quiz-progress').style.width = pct + '%';
-    document.getElementById('quiz-count').textContent = (current + 1) + ' of ' + QS.length;
-
-    var body = document.getElementById('quiz-body');
-    body.innerHTML = '';
-    var qEl = document.createElement('div');
-    qEl.className = 'quiz__q';
-    qEl.textContent = q.q;
-    body.appendChild(qEl);
-
-    var optEl = document.createElement('div');
-    optEl.className = 'quiz__options';
+    document.getElementById('quiz-q').textContent = q.q;
+    var optsEl = document.getElementById('quiz-opts');
+    optsEl.innerHTML = '';
     q.opts.forEach(function(opt, i) {
       var btn = document.createElement('button');
       btn.className = 'quiz__opt' + (answers[current] === i ? ' selected' : '');
       btn.textContent = opt;
       btn.onclick = function() {
         answers[current] = i;
-        optEl.querySelectorAll('.quiz__opt').forEach(function(b) { b.classList.remove('selected'); });
+        document.querySelectorAll('.quiz__opt').forEach(function(b) { b.classList.remove('selected'); });
         btn.classList.add('selected');
         document.getElementById('quiz-next-btn').disabled = false;
       };
-      optEl.appendChild(btn);
+      optsEl.appendChild(btn);
     });
-    body.appendChild(optEl);
+    document.getElementById('quiz-count').textContent = (current + 1) + ' of 3';
+    document.getElementById('quiz-bar').style.width = Math.round(((current + 1) / 3) * 100) + '%';
+    document.getElementById('quiz-back-btn').style.visibility = current > 0 ? 'visible' : 'hidden';
     document.getElementById('quiz-next-btn').disabled = answers[current] === null;
   }
 
-  window.quizNext = function() {
+  function quizNext() {
     if (answers[current] === null) return;
-    current++;
-    if (current < QS.length) {
-      render();
+    if (current < 2) {
+      current++;
+      renderStep();
     } else {
-      // All questions answered — show lead capture
-      document.getElementById('quiz-box').classList.add('hidden');
-      document.getElementById('capture-box').classList.remove('hidden');
-      document.getElementById('quiz-footer').style.display = 'none';
-      // Pre-fill hidden category
-      var area = computeArea();
-      document.getElementById('hidden-category').value = area.key;
-      document.getElementById('hidden-category-label').value = RESULTS[area.key].name;
+      showCapture();
     }
-  };
-
-  window.quizBack = function() {
-    if (current > 0) { current--; render(); }
-  };
-
-  function computeArea() {
-    var scores = {};
-    Object.keys(RESULTS).forEach(function(k) { scores[k] = 0; });
-    QS.forEach(function(q) { scores[q.cat]++; });
-    // Weight by whether the user chose the "most challenged" options (index 0 or 1 = stronger signal)
-    var weighted = {};
-    Object.keys(RESULTS).forEach(function(k) { weighted[k] = 0; });
-    QS.forEach(function(q, i) {
-      if (answers[i] !== null) {
-        var weight = (answers[i] === 0) ? 3 : (answers[i] === 1) ? 2 : 1;
-        weighted[q.cat] += weight;
-      }
-    });
-    var top = Object.keys(weighted).reduce(function(a, b) { return weighted[a] >= weighted[b] ? a : b; });
-    return { key: top };
   }
 
-  /* ── FORMSPREE SUBMISSION ── */
-  window.submitCapture = function() {
-    var name  = document.getElementById('cap-name').value.trim();
-    var email = document.getElementById('cap-email').value.trim();
-    var phone = document.getElementById('cap-phone').value.trim();
-    var code  = document.getElementById('cap-country').value;
-    var errEl = document.getElementById('form-error');
-    var btn   = document.getElementById('submit-btn');
-
-    errEl.style.display = 'none';
-
-    if (!name || !email) {
-      errEl.style.display = 'block';
-      return;
-    }
-
-    // Basic email validation
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      errEl.textContent = 'Please enter a valid email address.';
-      errEl.style.display = 'block';
-      return;
-    }
-
-    var area = computeArea();
-    var categoryKey   = area.key;
-    var categoryLabel = RESULTS[categoryKey].name;
-
-    // Update hidden fields
-    document.getElementById('hidden-category').value       = categoryKey;
-    document.getElementById('hidden-category-label').value = categoryLabel;
-
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
-
-    // Build FormData
-    var formData = new FormData();
-    formData.append('first_name',              name);
-    formData.append('email',                   email);
-    formData.append('phone_country_code',      code);
-    formData.append('phone_number',            phone);
-    formData.append('assessment_category',     categoryKey);
-    formData.append('assessment_category_label', categoryLabel);
-    formData.append('_subject',                'New Kingdom Mindset Assessment — ' + categoryLabel);
-
-    // POST to Formspree
-    fetch(FORMSPREE_ENDPOINT, {
-      method:  'POST',
-      body:    formData,
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(function(response) {
-      if (response.ok) {
-        showResults(categoryKey);
-      } else {
-        // If Formspree ID not yet set up, still show results (so the page is functional)
-        showResults(categoryKey);
-      }
-    })
-    .catch(function() {
-      // Network error — show results anyway so user is not blocked
-      showResults(categoryKey);
-    });
-  };
-
-  function showResults(categoryKey) {
-    var area = RESULTS[categoryKey];
-    document.getElementById('capture-box').classList.add('hidden');
-
-    document.getElementById('results-area-name').textContent = area.name;
-    document.getElementById('results-body-text').textContent = area.body;
-
-    var actEl = document.getElementById('results-actions');
-    actEl.innerHTML = '';
-    area.actions.forEach(function(ac) {
-      var d = document.createElement('div');
-      d.className = 'action-card';
-      d.innerHTML = '<div class="action-card__label">' + ac.label + '</div><div class="action-card__text">' + ac.text + '</div>';
-      actEl.appendChild(d);
-    });
-
-    var rs = document.getElementById('results-section');
-    rs.style.display = 'block';
-    rs.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  function quizBack() {
+    if (current > 0) { current--; renderStep(); }
   }
 
-  /* ── INIT ── */
-  render();
+  function showCapture() {
+    document.getElementById('quiz-box').classList.add('hidden');
+    document.getElementById('capture-box').classList.remove('hidden');
+    var counts = { financial: 0, purpose: 0, faith: 0 };
+    if (answers[0] !== null) counts.financial++;
+    if (answers[1] !== null) counts.purpose++;
+    if (answers[2] !== null) counts.faith++;
+    var area = Object.keys(counts).reduce(function(a, b) { return counts[a] >= counts[b] ? a : b; });
+    setTimeout(function() { showResults(area); }, 4000);
+  }
 
-})();
+  function showResults(key) {
+    var r = RESULTS[key] || RESULTS.purpose;
+    document.getElementById('results-area-name').textContent = r.name;
+    document.getElementById('results-body').textContent = r.body;
+    var actionsEl = document.getElementById('results-actions');
+    actionsEl.innerHTML = '';
+    r.actions.forEach(function(a) {
+      actionsEl.innerHTML += '<div class="action-card"><div class="action-card__label">' + a.label + '</div><div class="action-card__text">' + a.text + '</div></div>';
+    });
+    document.getElementById('results-section').style.display = 'block';
+    document.getElementById('results-section').classList.remove('hidden');
+    document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  renderStep();
 </script>
 </body>
 </html>
