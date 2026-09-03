@@ -308,14 +308,9 @@
       <form
         class="capture-form"
         id="blueprint-form"
-        action="https://formspree.io/f/xeaqkrqq"
-        method="POST"
         onsubmit="handleFormSubmit(event)"
       >
-        <!-- Hidden metadata -->
-        <input type="hidden" name="_subject" value="New Kingdom Mindset Blueprint Subscriber" />
         <input type="hidden" name="mindset_area" id="hidden-mindset-area" value="" />
-        <input type="hidden" name="source" value="landing-page-assessment-funnel" />
 
         <label class="field-label" for="capture-firstname">
           First Name <span class="opt">(optional)</span>
@@ -647,7 +642,7 @@
     }, 80);
   }
 
-  /* ── Form submission ── */
+  /* ── Form submission via Brevo hosted endpoint ── */
   function handleFormSubmit(e) {
     e.preventDefault();
     var emailVal = document.getElementById('capture-email').value.trim();
@@ -661,22 +656,20 @@
 
     gtag('event', 'email_submitted', { event_category: 'funnel', event_label: 'blueprint_capture', mindset_area: detectedArea });
 
-    fetch(e.target.action, {
+    /* Submit to Brevo hosted form endpoint */
+    var formData = new FormData();
+    formData.append('EMAIL', emailVal);
+    formData.append('locale', 'en');
+    formData.append('html_type', 'simple');
+    formData.append('email_address_check', '');
+
+    fetch('https://51cb6546.sibforms.com/serve/MUIFADBgQmnBXY2VZnGfn4teucOeZ-9Tuz3tQ2nlKH4A7R10nDDWj7RAhSOL_PQzI3okwtmmuiJyvCGjAYxpiJoHQcQxe9acrk5sXzug2eBGpQfpmLeTCUtZWhJVysLow96ImypiynQ0SFQkCLroEy4zssNjpCPr15lj6MWBuudtxGq15-fmsNGIV3H9A9u4xsYFMqmEclDhVvrETw==', {
       method: 'POST',
-      body: new FormData(e.target),
-      headers: { 'Accept': 'application/json' }
+      body: formData,
+      mode: 'no-cors'
     })
-    .then(function(res) {
-      if (res.ok) {
-        showThankYou();
-      } else {
-        res.json().then(function(data) {
-          var msg = data.errors ? data.errors.map(function(err) { return err.message; }).join(', ') : 'Submission failed.';
-          showFormError(msg);
-        }).catch(function() { showFormError(); });
-        btn.disabled = false;
-        btn.textContent = 'SEND ME MY FREE BLUEPRINT \u2192';
-      }
+    .then(function() {
+      showThankYou();
     })
     .catch(function() {
       showFormError('Network error. Please check your connection and try again.');
