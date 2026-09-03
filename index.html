@@ -647,6 +647,7 @@
   var EJS_SERVICE  = 'service_humc2td';
   var EJS_TEMPLATE = 'template_2k6ezzd';
   var EJS_PUBLIC   = '9g0LlZOpeXEelklAC';
+  emailjs.init(EJS_PUBLIC);
 
   /* ── Form submission via EmailJS ── */
   function handleFormSubmit(e) {
@@ -669,6 +670,12 @@
       mindset_area: detectedArea
     }, EJS_PUBLIC)
     .then(function() {
+      /* Also send yourself a lead notification */
+      emailjs.send(EJS_SERVICE, EJS_TEMPLATE, {
+        to_email: 'hickmonswholesale@gmail.com',
+        to_name: 'Rahiem',
+        mindset_area: 'NEW LEAD: ' + emailVal + ' — Mindset area: ' + detectedArea
+      }, EJS_PUBLIC);
       showThankYou();
     }, function(error) {
       showFormError('Something went wrong. Please try again.');
