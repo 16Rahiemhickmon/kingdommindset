@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Think Better, Live Wiser — Kingdom Mindset Co</title>
-  <meta name="description" content="Get the ebook that shifts how you think, decide, and live. By Rahiem Hickmon of Kingdom Mindset Co. Just $14.99." />
+  <title>Free Daily Mindset Reset Blueprint — Kingdom Mindset Co</title>
+  <meta name="description" content="Take the free Kingdom Mindset Assessment and get your free Daily Mindset Reset & Action Blueprint. Kingdom Mindset Co by Rahiem Hickmon." />
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TXVBDY3JGQ"></script>
   <script>
@@ -12,7 +13,9 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-TXVBDY3JGQ');
+    gtag('event', 'landing_page_view', { event_category: 'funnel', event_label: 'kingdom_mindset_lp' });
   </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
@@ -30,30 +33,36 @@
       --navy: #11102b; --purple: #2b2560; --gold: #c9a84c; --gold-lt: #f0d078;
       --cream: #f9f6ef; --slate: #4a4a6a; --light: #f4f3fb; --white: #ffffff; --red: #b94040;
     }
+
+    /* NAV */
     .nav { background: var(--navy); padding: 18px 28px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
     .nav__brand { color: var(--gold); font-family: 'Georgia', serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.04em; }
     .nav__brand small { display: block; font-size: 0.6rem; color: rgba(255,255,255,0.45); font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; font-family: Arial, sans-serif; }
-    .nav__cta { background: var(--gold); color: var(--navy); font-family: Arial, sans-serif; font-size: 0.78rem; font-weight: 700; padding: 9px 20px; border-radius: 6px; letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap; }
+    .nav__cta { background: var(--gold); color: var(--navy); font-family: Arial, sans-serif; font-size: 0.78rem; font-weight: 700; padding: 9px 20px; border-radius: 6px; letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap; cursor: pointer; border: none; }
+
+    /* HERO */
     .hero { background: linear-gradient(160deg, #0a091f 0%, #1a1640 55%, #2b2560 100%); color: #fff; padding: 100px 0 80px; text-align: center; position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; top: -120px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%); pointer-events: none; }
     .hero__tag { display: inline-block; border: 1px solid rgba(201,168,76,0.5); color: var(--gold); font-family: Arial, sans-serif; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; padding: 6px 18px; border-radius: 100px; margin-bottom: 32px; }
     .hero h1 { font-size: clamp(1.9rem, 5vw, 3.1rem); color: #fff; max-width: 700px; margin: 0 auto 22px; font-weight: 700; }
     .hero h1 em { color: var(--gold); font-style: normal; }
     .hero__sub { font-size: clamp(0.97rem, 2.2vw, 1.15rem); color: rgba(255,255,255,0.78); max-width: 560px; margin: 0 auto 12px; font-family: Arial, sans-serif; line-height: 1.65; }
-    .hero__price-line { font-family: Arial, sans-serif; font-size: clamp(0.88rem, 2vw, 1.02rem); color: rgba(255,255,255,0.62); max-width: 560px; margin: 0 auto 44px; }
-    .btn-gold { display: inline-block; background: var(--gold); color: var(--navy); font-family: Arial, sans-serif; font-weight: 700; font-size: 1rem; padding: 18px 46px; border-radius: 8px; letter-spacing: 0.01em; border: none; transition: background 0.2s, transform 0.15s; }
+    .hero__free-line { font-family: Arial, sans-serif; font-size: clamp(0.88rem, 2vw, 1.02rem); color: var(--gold); max-width: 560px; margin: 0 auto 44px; font-weight: 700; letter-spacing: 0.04em; }
+    .btn-gold { display: inline-block; background: var(--gold); color: var(--navy); font-family: Arial, sans-serif; font-weight: 700; font-size: 1rem; padding: 18px 46px; border-radius: 8px; letter-spacing: 0.01em; border: none; transition: background 0.2s, transform 0.15s; cursor: pointer; }
     .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); }
-    .btn-navy { display: inline-block; background: var(--navy); color: var(--gold); font-family: Arial, sans-serif; font-weight: 700; font-size: 1rem; padding: 18px 46px; border-radius: 8px; letter-spacing: 0.01em; border: 2px solid var(--gold); transition: background 0.2s, transform 0.15s; }
-    .btn-navy:hover { background: #1a1640; transform: translateY(-2px); }
     .hero__trust { margin-top: 20px; font-family: Arial, sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.42); }
     .hero__author { margin-top: 52px; display: flex; align-items: center; justify-content: center; gap: 14px; }
     .hero__author-badge { width: 50px; height: 50px; border-radius: 50%; background: rgba(201,168,76,0.18); border: 2px solid var(--gold); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
     .hero__author-name { font-size: 0.88rem; font-weight: 700; color: #fff; font-family: Arial, sans-serif; }
     .hero__author-title { font-size: 0.72rem; color: rgba(255,255,255,0.5); font-family: Arial, sans-serif; letter-spacing: 0.04em; text-transform: uppercase; }
+
+    /* TRUST STRIP */
     .trust-strip { background: var(--navy); border-top: 1px solid rgba(201,168,76,0.2); border-bottom: 1px solid rgba(201,168,76,0.2); padding: 20px 28px; }
     .trust-strip__inner { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
     .trust-item { display: flex; align-items: center; gap: 9px; font-family: Arial, sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.6); letter-spacing: 0.04em; text-transform: uppercase; }
     .trust-item__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+    /* ASSESSMENT */
     .assessment { background: var(--cream); }
     .assessment__intro { text-align: center; margin-bottom: 52px; }
     .assessment__intro h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); color: var(--navy); margin-bottom: 14px; }
@@ -74,31 +83,73 @@
     .quiz__back { background: none; border: 1px solid #d0cce8; color: var(--slate); font-family: Arial, sans-serif; font-size: 0.82rem; padding: 10px 20px; border-radius: 6px; }
     .quiz__next { background: var(--navy); color: var(--gold); font-family: Arial, sans-serif; font-weight: 700; font-size: 0.92rem; padding: 13px 30px; border-radius: 8px; border: none; }
     .quiz__next:disabled { opacity: 0.35; cursor: default; }
-    .quiz__capture { padding: 32px; }
-    .quiz__capture h3 { font-size: 1.2rem; color: var(--navy); margin-bottom: 8px; font-family: 'Georgia', serif; }
-    .quiz__capture p { font-family: Arial, sans-serif; font-size: 0.9rem; color: var(--slate); margin-bottom: 24px; }
-    #results-section { background: var(--light); display: none; }
-    .results-box { background: #fff; border-radius: 18px; box-shadow: 0 8px 48px rgba(17,16,43,0.10); max-width: 640px; margin: 0 auto; padding: 40px 36px; }
+
+    /* EMAIL CAPTURE */
+    .email-capture-section { background: var(--light); display: none; }
+    .email-capture-box { background: #fff; border-radius: 18px; box-shadow: 0 8px 48px rgba(17,16,43,0.12); max-width: 600px; margin: 0 auto; padding: 44px 40px; text-align: center; }
     .results-badge { display: inline-flex; align-items: center; gap: 10px; background: var(--navy); color: var(--gold); font-family: Arial, sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 18px; border-radius: 100px; margin-bottom: 22px; }
-    .results-area { font-size: clamp(1.3rem, 3vw, 1.7rem); color: var(--navy); font-weight: 700; margin-bottom: 18px; font-family: 'Georgia', serif; }
-    .results-body { font-family: Arial, sans-serif; font-size: 0.97rem; color: var(--slate); margin-bottom: 24px; line-height: 1.7; }
-    .action-card { background: var(--cream); border-left: 4px solid var(--gold); border-radius: 0 10px 10px 0; padding: 16px 20px; margin-bottom: 12px; }
-    .action-card__label { font-family: Arial, sans-serif; font-size: 0.7rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 5px; }
-    .action-card__text { font-family: Arial, sans-serif; font-size: 0.92rem; color: #333; line-height: 1.55; }
-    .results-next { margin-top: 30px; text-align: center; }
-    .results-next p { font-family: Arial, sans-serif; font-size: 0.88rem; color: var(--slate); margin-bottom: 18px; }
+    .email-capture-box h2 { font-size: clamp(1.3rem, 3vw, 1.8rem); color: var(--navy); margin-bottom: 10px; }
+    .capture-sub { font-family: Arial, sans-serif; font-size: 0.97rem; color: var(--slate); margin-bottom: 8px; line-height: 1.65; }
+    .results-teaser { background: var(--cream); border-left: 4px solid var(--gold); border-radius: 0 10px 10px 0; padding: 16px 20px; margin-bottom: 24px; text-align: left; }
+    .results-teaser__label { font-family: Arial, sans-serif; font-size: 0.7rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 5px; }
+    .results-teaser__name { font-family: 'Georgia', serif; font-size: 1.05rem; font-weight: 700; color: var(--navy); }
+    .results-teaser__body { font-family: Arial, sans-serif; font-size: 0.88rem; color: var(--slate); margin-top: 6px; line-height: 1.55; }
+    .blueprint-title { font-family: 'Georgia', serif; font-size: 1.08rem; font-weight: 700; color: var(--purple); margin: 18px 0 6px; border-left: 3px solid var(--gold); padding-left: 14px; text-align: left; }
+    .blueprint-tagline { font-family: Arial, sans-serif; font-size: 0.88rem; color: var(--slate); font-style: italic; text-align: left; padding-left: 17px; margin-bottom: 28px; }
+    .capture-form { display: flex; flex-direction: column; gap: 14px; margin-bottom: 14px; }
+    .capture-form input[type="text"],
+    .capture-form input[type="email"] { width: 100%; padding: 14px 18px; border: 2px solid #e0ddf0; border-radius: 8px; font-family: Arial, sans-serif; font-size: 0.97rem; color: #1c1c2e; transition: border-color 0.18s; background: #fafafa; }
+    .capture-form input:focus { outline: none; border-color: var(--gold); background: #fff; }
+    .capture-form input::placeholder { color: #aaa; }
+    .field-label { font-family: Arial, sans-serif; font-size: 0.8rem; color: var(--slate); text-align: left; margin-bottom: -8px; font-weight: 600; display: block; }
+    .field-label .req { color: var(--red); }
+    .field-label .opt { color: #999; font-weight: 400; }
+    .btn-capture { width: 100%; background: var(--gold); color: var(--navy); font-family: Arial, sans-serif; font-weight: 700; font-size: 1.05rem; padding: 18px; border-radius: 8px; border: none; cursor: pointer; letter-spacing: 0.02em; transition: background 0.2s, transform 0.15s; }
+    .btn-capture:hover { background: var(--gold-lt); transform: translateY(-1px); }
+    .btn-capture:disabled { opacity: 0.5; cursor: default; transform: none; }
+    .capture-meta { font-family: Arial, sans-serif; font-size: 0.78rem; color: rgba(100,100,130,0.65); margin-top: 10px; }
+    .capture-privacy { font-family: Arial, sans-serif; font-size: 0.74rem; color: #999; margin-top: 10px; line-height: 1.55; }
+    .capture-error { background: #fff0f0; border: 1px solid #f5c0c0; border-radius: 8px; padding: 12px 16px; font-family: Arial, sans-serif; font-size: 0.88rem; color: var(--red); display: none; margin-top: 8px; }
+
+    /* THANK-YOU */
+    .thankyou-section { background: var(--cream); display: none; }
+    .thankyou-box { background: #fff; border-radius: 18px; box-shadow: 0 8px 48px rgba(17,16,43,0.12); max-width: 640px; margin: 0 auto; padding: 44px 40px; text-align: center; }
+    .thankyou-icon { font-size: 3rem; margin-bottom: 18px; }
+    .thankyou-box h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); color: var(--navy); margin-bottom: 14px; }
+    .ty-sub { font-family: Arial, sans-serif; font-size: 1rem; color: var(--slate); margin-bottom: 28px; line-height: 1.65; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .ty-download-btn { display: inline-block; background: var(--navy); color: var(--gold); font-family: Arial, sans-serif; font-weight: 700; font-size: 1rem; padding: 16px 36px; border-radius: 8px; border: 2px solid var(--gold); margin-bottom: 10px; transition: background 0.2s; }
+    .ty-download-btn:hover { background: #1a1640; }
+    .ty-download-note { font-family: Arial, sans-serif; font-size: 0.76rem; color: #aaa; margin-bottom: 28px; }
+    .ty-confirm-strip { background: var(--cream); border: 1px solid rgba(201,168,76,0.35); border-radius: 10px; padding: 18px 22px; margin-bottom: 32px; display: flex; align-items: center; gap: 14px; text-align: left; }
+    .ty-confirm-strip__icon { font-size: 1.6rem; flex-shrink: 0; }
+    .ty-confirm-strip__text { font-family: Arial, sans-serif; font-size: 0.9rem; color: var(--slate); line-height: 1.55; }
+    .ty-confirm-strip__text strong { color: var(--navy); }
+    .upsell-divider { border: none; border-top: 2px solid #e8e5f5; margin: 36px 0; }
+    .upsell-label { font-family: Arial, sans-serif; font-size: 0.72rem; font-weight: 700; color: var(--gold); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px; }
+    .upsell-box { background: linear-gradient(135deg, #0a091f 0%, #1a1640 100%); border-radius: 14px; padding: 32px 28px; color: #fff; }
+    .upsell-box h3 { font-size: clamp(1.2rem, 2.8vw, 1.6rem); color: #fff; margin-bottom: 12px; }
+    .upsell-box p { font-family: Arial, sans-serif; font-size: 0.93rem; color: rgba(255,255,255,0.72); margin-bottom: 24px; line-height: 1.65; }
+    .btn-upsell { display: inline-block; background: var(--gold); color: var(--navy); font-family: Arial, sans-serif; font-weight: 700; font-size: 1rem; padding: 16px 38px; border-radius: 8px; border: none; cursor: pointer; letter-spacing: 0.01em; transition: background 0.2s; }
+    .btn-upsell:hover { background: var(--gold-lt); }
+    .upsell-meta { font-family: Arial, sans-serif; font-size: 0.74rem; color: rgba(255,255,255,0.38); margin-top: 12px; }
+
+    /* BOOK INTRO */
     .book-intro { background: var(--cream); }
     .book-intro__grid { display: grid; grid-template-columns: 220px 1fr; gap: 52px; align-items: start; }
-    .book-cover-img { width: 220px; border-radius: 6px; box-shadow: 16px 16px 40px rgba(0,0,0,0.35); flex-shrink: 0; display: block; }
+    .book-cover-img { width: 220px; border-radius: 6px; box-shadow: 16px 16px 40px rgba(0,0,0,0.35); display: block; }
     .book-intro__content h2 { font-size: clamp(1.4rem, 3vw, 2rem); color: var(--navy); margin-bottom: 16px; }
     .book-intro__content p { font-family: Arial, sans-serif; font-size: 0.97rem; color: var(--slate); line-height: 1.72; }
     .book-topics { list-style: none; margin: 24px 0; }
     .book-topics li { display: flex; align-items: flex-start; gap: 12px; font-family: Arial, sans-serif; font-size: 0.92rem; color: #333; padding: 8px 0; border-bottom: 1px solid #ece9f8; line-height: 1.5; }
     .book-topics li:last-child { border-bottom: none; }
     .book-topics__dot { flex-shrink: 0; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); margin-top: 7px; }
+
+    /* SCRIPTURE */
     .scripture { background: var(--white); border-top: 1px solid #e8e5f5; border-bottom: 1px solid #e8e5f5; padding: 52px 28px; text-align: center; }
     .scripture blockquote { font-size: clamp(1.1rem, 2.5vw, 1.35rem); font-style: italic; color: var(--purple); max-width: 640px; margin: 0 auto 12px; line-height: 1.6; }
     .scripture cite { font-family: Arial, sans-serif; font-size: 0.8rem; color: #999; font-style: normal; letter-spacing: 0.07em; }
+
+    /* PREVIEW */
     .preview { background: var(--white); }
     .preview h2 { font-size: clamp(1.4rem, 3vw, 2rem); color: var(--navy); margin-bottom: 10px; text-align: center; }
     .preview__sub { text-align: center; font-family: Arial, sans-serif; font-size: 0.97rem; color: var(--slate); max-width: 500px; margin: 0 auto 52px; }
@@ -107,16 +158,16 @@
     .preview-card__icon { font-size: 1.6rem; margin-bottom: 12px; }
     .preview-card h3 { font-family: Arial, sans-serif; font-size: 0.97rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
     .preview-card p { font-family: Arial, sans-serif; font-size: 0.86rem; color: var(--slate); line-height: 1.6; margin: 0; }
-    .sample-pages { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 40px; }
-    .sample-page-wrap { border-radius: 12px; overflow: hidden; box-shadow: 0 6px 32px rgba(17,16,43,0.12); }
-    .sample-page-wrap img { width: 100%; height: auto; display: block; }
-    .sample-page-label { background: var(--navy); color: var(--gold); font-family: Arial, sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 14px; text-align: center; }
+
+    /* WHO */
     .who { background: var(--navy); color: #fff; }
     .who h2 { font-size: clamp(1.4rem, 3vw, 2rem); color: var(--gold); margin-bottom: 12px; text-align: center; }
     .who__sub { text-align: center; font-family: Arial, sans-serif; font-size: 0.97rem; color: rgba(255,255,255,0.6); max-width: 500px; margin: 0 auto 48px; }
     .who__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
     .who-item { display: flex; align-items: flex-start; gap: 14px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 18px 20px; font-family: Arial, sans-serif; font-size: 0.91rem; color: rgba(255,255,255,0.85); line-height: 1.5; }
     .who-item__icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+
+    /* FINAL OFFER */
     .offer { background: linear-gradient(160deg, #0a091f 0%, #1a1640 55%, #2b2560 100%); color: #fff; text-align: center; }
     .offer__tag { display: inline-block; border: 1px solid rgba(201,168,76,0.45); color: var(--gold); font-family: Arial, sans-serif; font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; padding: 5px 16px; border-radius: 100px; margin-bottom: 24px; }
     .offer h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); color: #fff; max-width: 620px; margin: 0 auto 18px; }
@@ -129,44 +180,52 @@
     .offer__check { width: 22px; height: 22px; border-radius: 50%; background: var(--gold); display: flex; align-items: center; justify-content: center; color: var(--navy); font-size: 0.72rem; font-weight: 700; flex-shrink: 0; }
     .offer__cta-group { display: flex; flex-direction: column; align-items: center; gap: 14px; }
     .offer__meta { font-family: Arial, sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.38); margin-top: 6px; }
+
+    /* FOOTER */
     footer { background: #070616; color: rgba(255,255,255,0.28); text-align: center; padding: 32px 24px; font-family: Arial, sans-serif; font-size: 0.74rem; line-height: 1.8; }
     footer a { color: rgba(255,255,255,0.45); text-decoration: underline; }
     footer strong { color: rgba(255,255,255,0.55); }
     .text-center { text-align: center; }
     .hidden { display: none !important; }
+
+    /* MOBILE */
     @media (max-width: 680px) {
       .sec { padding: 56px 0; }
       .nav { padding: 14px 18px; }
       .hero { padding: 72px 0 56px; }
       .book-intro__grid { grid-template-columns: 1fr; gap: 32px; }
       .book-cover-img { width: 180px; margin: 0 auto; }
-      .sample-pages { grid-template-columns: 1fr; gap: 20px; }
       .quiz__body { padding: 24px 18px 18px; }
       .quiz__footer { padding: 0 18px 24px; }
-      .quiz__capture { padding: 20px 18px; }
-      .results-box { padding: 28px 20px; }
-      .btn-gold, .btn-navy { padding: 16px 28px; font-size: 0.95rem; width: 100%; text-align: center; }
+      .btn-gold { padding: 16px 28px; font-size: 0.95rem; width: 100%; text-align: center; display: block; }
       .offer__price { font-size: 2.4rem; }
       .preview__grid { grid-template-columns: 1fr; }
       .who__grid { grid-template-columns: 1fr; }
+      .email-capture-box, .thankyou-box { padding: 30px 20px; }
+      .btn-capture { font-size: 0.97rem; }
+      .upsell-box { padding: 24px 18px; }
+      .ty-download-btn { width: 100%; text-align: center; display: block; }
     }
   </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav class="nav">
   <div class="nav__brand">Kingdom Mindset Co<small>by Rahiem Hickmon</small></div>
-  <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=jd2nJ&qty%5Bjd2nJ%5D=1" target="_blank" rel="noopener" class="nav__cta">Get the Book</a>
+  <button class="nav__cta" onclick="scrollToAssessment()">Get Free Blueprint</button>
 </nav>
 
+
+<!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <div class="hero__tag">Digital Ebook &bull; Instant Download &bull; Available Worldwide</div>
-    <h1>Think Better.<br><em>Live Wiser.</em></h1>
-    <p class="hero__sub">A practical, faith-rooted guide to sharper decisions, stronger habits, and a life built on purpose — not just potential.</p>
-    <p class="hero__price-line">For less than your next meal out, get the mindset shift that changes how you think, decide, and live. Just $14.99.</p>
-    <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=jd2nJ&qty%5Bjd2nJ%5D=1" target="_blank" rel="noopener" class="btn-gold">Get the Book — $14.99</a>
-    <p class="hero__trust">Instant download &bull; Read on any device &bull; Available globally</p>
+    <div class="hero__tag">Free Resource &bull; Instant Access &bull; Available Worldwide</div>
+    <h1>Renew Your Mind.<br><em>Execute With Purpose.</em></h1>
+    <p class="hero__sub">Take our free 3-question Kingdom Mindset Assessment and receive your free Daily Mindset Reset &amp; Action Blueprint — designed to help you start and end each day with faith, focus, and intention.</p>
+    <p class="hero__free-line">100% FREE &bull; No Purchase Required &bull; Instant Access</p>
+    <button class="btn-gold" onclick="scrollToAssessment()">Take the Free Assessment &rarr;</button>
+    <p class="hero__trust">Faith-Centered &bull; Practical &bull; Designed for Intentional Living</p>
     <div class="hero__author">
       <div class="hero__author-badge">&#9998;</div>
       <div>
@@ -177,21 +236,23 @@
   </div>
 </section>
 
+<!-- TRUST STRIP -->
 <div class="trust-strip">
   <div class="trust-strip__inner">
     <div class="trust-item"><div class="trust-item__dot"></div>Faith-Centered</div>
     <div class="trust-item"><div class="trust-item__dot"></div>Practical &amp; Actionable</div>
-    <div class="trust-item"><div class="trust-item__dot"></div>Instant Download</div>
+    <div class="trust-item"><div class="trust-item__dot"></div>Instant Access</div>
     <div class="trust-item"><div class="trust-item__dot"></div>Available Worldwide</div>
   </div>
 </div>
+
 
 <!-- ASSESSMENT -->
 <section class="assessment sec" id="assessment">
   <div class="wrap--narrow">
     <div class="assessment__intro">
       <h2>Where Is Your Mindset Holding You Back?</h2>
-      <p>Answer 3 quick questions to find out where to focus your energy — then get the book that helps you shift it.</p>
+      <p>Answer 3 quick questions to identify your primary growth area — then get your free Daily Mindset Reset &amp; Action Blueprint instantly.</p>
     </div>
     <div class="quiz" id="quiz-box">
       <div class="quiz__progress-bar-wrap"><div class="quiz__progress-bar" id="quiz-bar"></div></div>
@@ -208,46 +269,164 @@
         <button class="quiz__next" id="quiz-next-btn" onclick="quizNext()" disabled>Next &rarr;</button>
       </div>
     </div>
-
-    <!-- TALLY CAPTURE — shown after quiz -->
-    <div class="quiz hidden" id="capture-box">
-      <div class="quiz__progress-bar-wrap"><div class="quiz__progress-bar" style="width:100%;"></div></div>
-      <div class="quiz__header">
-        <span class="quiz__step-label">Almost there</span>
-        <span class="quiz__step-count" style="color:var(--gold);">&#10003; Assessment Complete</span>
-      </div>
-      <div class="quiz__capture">
-        <h3>You're one step away — get the book.</h3>
-        <p>Fill in your details below and get the book that shifts how you think, decide, and live.</p>
-        <iframe data-tally-src="https://tally.so/embed/kd8Zy6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" title="Kingdom Mindset Co — Stay Connected"></iframe>
-        <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-      </div>
-    </div>
   </div>
 </section>
 
-<!-- RESULTS -->
-<section class="sec hidden" id="results-section">
+
+<!-- EMAIL CAPTURE — shown after quiz completes -->
+<section class="email-capture-section sec" id="email-capture-section">
   <div class="wrap--narrow">
-    <div class="results-box">
-      <div class="results-badge">&#9733; Your Kingdom Mindset Result</div>
-      <p class="results-area" id="results-area-name"></p>
-      <p class="results-body" id="results-body"></p>
-      <div id="results-actions"></div>
-      <div class="results-next">
-        <p>The book that addresses this directly — and gives you the practical tools to shift it.</p>
-        <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=jd2nJ&qty%5Bjd2nJ%5D=1" target="_blank" rel="noopener" class="btn-gold" style="font-size:0.92rem;padding:14px 32px;">Get the Book &mdash; $14.99 &rarr;</a>
+    <div class="email-capture-box">
+
+      <div class="results-badge">&#9733; Your Kingdom Mindset Result Is Ready</div>
+
+      <div class="results-teaser" id="result-teaser">
+        <div class="results-teaser__label">Your Primary Focus Area</div>
+        <div class="results-teaser__name" id="result-teaser-name"></div>
+        <div class="results-teaser__body" id="result-teaser-body"></div>
       </div>
+
+      <h2>You've taken the first step toward thinking more intentionally.</h2>
+      <p class="capture-sub" style="margin-top:14px;">Now put that insight into action.</p>
+      <p class="capture-sub">Get your <strong>FREE Daily Mindset Reset &amp; Action Blueprint</strong> — designed to help you start and end each day with greater faith, focus, discipline, wisdom, and purpose.</p>
+
+      <div class="blueprint-title">Daily Mindset Reset &amp; Action Blueprint</div>
+      <p class="blueprint-tagline">Renew Your Mind. Align Your Faith. Execute With Purpose.</p>
+
+      <!--
+        FORMSPREE SETUP INSTRUCTIONS FOR RAHIEM:
+        ==========================================
+        1. Go to https://formspree.io and create a free account.
+        2. Click "New Form" — name it "Kingdom Mindset Blueprint Subscribers".
+        3. Copy the form endpoint URL (looks like: https://formspree.io/f/xxxxxxxx).
+        4. Replace YOUR_FORMSPREE_FORM_ID in the action attribute below with your actual form ID.
+        5. In Formspree dashboard > your form > Settings:
+             - Under "Email Notifications": turn ON notifications to hickmonswholesale@gmail.com
+             - Under "Auto-Response": ENABLE it, use the email template at the bottom of this file.
+        6. That's it. Every subscriber is stored in Formspree's "Submissions" tab — exportable as CSV.
+      -->
+      <form
+        class="capture-form"
+        id="blueprint-form"
+        action="https://formspree.io/f/xeaqkrqq"
+        method="POST"
+        onsubmit="handleFormSubmit(event)"
+      >
+        <!-- Hidden metadata -->
+        <input type="hidden" name="_subject" value="New Kingdom Mindset Blueprint Subscriber" />
+        <input type="hidden" name="mindset_area" id="hidden-mindset-area" value="" />
+        <input type="hidden" name="source" value="landing-page-assessment-funnel" />
+
+        <label class="field-label" for="capture-firstname">
+          First Name <span class="opt">(optional)</span>
+        </label>
+        <input
+          type="text"
+          id="capture-firstname"
+          name="first_name"
+          placeholder="Your first name"
+          autocomplete="given-name"
+        />
+
+        <label class="field-label" for="capture-email">
+          Email Address <span class="req">*</span>
+        </label>
+        <input
+          type="email"
+          id="capture-email"
+          name="email"
+          placeholder="Where should we send your free blueprint?"
+          required
+          autocomplete="email"
+        />
+
+        <button type="submit" class="btn-capture" id="capture-submit-btn">
+          SEND ME MY FREE BLUEPRINT &rarr;
+        </button>
+
+        <p class="capture-meta">100% FREE &bull; INSTANT ACCESS &bull; NO PURCHASE REQUIRED</p>
+
+        <div class="capture-error" id="capture-error">
+          Something went wrong. Please try again or refresh the page.
+        </div>
+
+        <p class="capture-privacy">
+          By submitting this form, you agree to receive your free blueprint and occasional Kingdom Mindset Co emails with faith-based resources, mindset tips, and updates. We will never sell or share your information. You can unsubscribe at any time.
+        </p>
+      </form>
     </div>
   </div>
 </section>
+
+
+<!-- THANK-YOU / SUCCESS — shown after successful form submission -->
+<section class="thankyou-section sec" id="thankyou-section">
+  <div class="wrap--narrow">
+    <div class="thankyou-box">
+      <div class="thankyou-icon">&#127775;</div>
+      <h2>Your Blueprint Is Ready!</h2>
+      <p class="ty-sub">
+        Thank you for joining the Kingdom Mindset Co. community. Check your email for your free
+        <strong>Daily Mindset Reset &amp; Action Blueprint</strong>.
+      </p>
+
+      <!-- Instant download button — PDF URL is the permanent hosted file -->
+      <a
+        href="https://b1d3f806-532e-4ff0-90d3-e7add3625e11.usrfiles.com/ugd/b4cdc1_458a7d3c5e094f88b9078258cd537e39.pdf"
+        target="_blank"
+        rel="noopener"
+        class="ty-download-btn"
+        onclick="gtag('event','blueprint_download_click',{event_category:'funnel',event_label:'thank_you_page'});"
+      >
+        &#8595; Download Your Blueprint Now
+      </a>
+      <p class="ty-download-note">PDF opens instantly &bull; Save it to use every morning and evening</p>
+
+      <div class="ty-confirm-strip">
+        <div class="ty-confirm-strip__icon">&#128140;</div>
+        <div class="ty-confirm-strip__text">
+          <strong>Also check your inbox</strong> — we've emailed your blueprint so you always have a copy. Check your spam folder if you don't see it within a few minutes.
+        </div>
+      </div>
+
+      <hr class="upsell-divider" />
+
+      <p class="upsell-label">Ready to Go Deeper?</p>
+
+      <div class="upsell-box">
+        <h3>Think Better, Live Wiser</h3>
+        <p>
+          Our complete faith-based guide to critical thinking, biblical wisdom, smarter money decisions,
+          discipline, and purposeful living — the natural next step after your blueprint.
+        </p>
+        <a
+          href="https://payhip.com/KingdomMindsetco"
+          target="_blank"
+          rel="noopener"
+          class="btn-upsell"
+          onclick="trackEbookClick()"
+        >
+          Get the Complete Ebook &mdash; $14.99 &rarr;
+        </a>
+        <p class="upsell-meta">Instant download &bull; Read on any device &bull; Available worldwide</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
 <!-- BOOK INTRO -->
 <section class="book-intro sec" id="book">
   <div class="wrap">
     <div class="book-intro__grid">
       <div>
-        <img src="https://static.wixstatic.com/media/b4cdc1_fe0aa4c9f4454b3caee4aba297b27e8b~mv2.jpg" alt="Think Better Live Wiser by Rahiem Hickmon — Kingdom Mindset Co" class="book-cover-img" onerror="this.style.display='none'" />
+        <img
+          src="https://static.wixstatic.com/media/b4cdc1_fe0aa4c9f4454b3caee4aba297b27e8b~mv2.jpg"
+          alt="Think Better Live Wiser by Rahiem Hickmon — Kingdom Mindset Co"
+          class="book-cover-img"
+          onerror="this.style.display='none'"
+        />
       </div>
       <div class="book-intro__content">
         <h2>A Book Built for the Person Who Is Ready to Think Differently</h2>
@@ -259,7 +438,14 @@
           <li><div class="book-topics__dot"></div>Aligning your faith with your everyday choices</li>
           <li><div class="book-topics__dot"></div>Practical steps for purpose-driven living</li>
         </ul>
-        <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=jd2nJ&qty%5Bjd2nJ%5D=1" target="_blank" rel="noopener" class="btn-gold" style="font-size:1rem;padding:18px 44px;">Get the Complete Book &mdash; $14.99 &rarr;</a>
+        <a
+          href="https://payhip.com/KingdomMindsetco"
+          target="_blank"
+          rel="noopener"
+          class="btn-gold"
+          style="font-size:1rem;padding:18px 44px;"
+          onclick="trackEbookClick()"
+        >Get the Complete Book &mdash; $14.99 &rarr;</a>
       </div>
     </div>
   </div>
@@ -267,8 +453,8 @@
 
 <div class="scripture">
   <div class="wrap--narrow">
-    <blockquote>"For as he thinketh in his heart, so is he."</blockquote>
-    <cite>Proverbs 23:7 &mdash; The foundation this book is built on</cite>
+    <blockquote>"Do not conform to the pattern of this world, but be transformed by the renewing of your mind."</blockquote>
+    <cite>Romans 12:2 &mdash; The foundation every blueprint and resource here is built on</cite>
   </div>
 </div>
 
@@ -300,15 +486,15 @@
       </div>
     </div>
     <div class="text-center">
-      <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=jd2nJ&qty%5Bjd2nJ%5D=1" target="_blank" rel="noopener" class="btn-gold" style="font-size:1rem;padding:18px 44px;">Get the Complete Book &mdash; $14.99 &rarr;</a>
+      <a href="https://payhip.com/KingdomMindsetco" target="_blank" rel="noopener" class="btn-gold" style="font-size:1rem;padding:18px 44px;" onclick="trackEbookClick()">Get the Complete Book &mdash; $14.99 &rarr;</a>
     </div>
   </div>
 </section>
 
-<!-- WHO -->
+<!-- WHO IT'S FOR -->
 <section class="who sec">
   <div class="wrap">
-    <h2>This Book Is For You If...</h2>
+    <h2>This Is For You If...</h2>
     <p class="who__sub">You do not need to have it all figured out. You just need to be ready to think differently.</p>
     <div class="who__grid">
       <div class="who-item"><div class="who-item__icon">&#9989;</div>You feel stuck and are not sure why your effort is not producing results</div>
@@ -324,9 +510,9 @@
 <!-- FINAL OFFER -->
 <section class="offer sec">
   <div class="wrap--narrow">
-    <div class="offer__tag">Limited Time &bull; Digital Ebook</div>
+    <div class="offer__tag">Digital Ebook &bull; Instant Download</div>
     <h2>Start Thinking Better Today</h2>
-    <p class="offer__body">For less than your next meal out, get the mindset shift that changes how you think, decide, and live.</p>
+    <p class="offer__body">For less than your next meal out, get the complete faith-based guide that changes how you think, decide, and live.</p>
     <div class="offer__price-wrap">
       <span class="offer__price">$14.99</span>
       <span class="offer__price-note">one-time &bull; instant download</span>
@@ -338,7 +524,7 @@
       <li><div class="offer__check">&#10003;</div>Read on any device, anywhere in the world</li>
     </ul>
     <div class="offer__cta-group">
-      <a href="https://payhip.com/buy?s=1&cart_links%5B%5D=jd2nJ&qty%5Bjd2nJ%5D=1" target="_blank" rel="noopener" class="btn-gold" style="font-size:1.08rem;padding:20px 56px;">Get Critical Thinking &mdash; $14.99 &rarr;</a>
+      <a href="https://payhip.com/KingdomMindsetco" target="_blank" rel="noopener" class="btn-gold" style="font-size:1.08rem;padding:20px 56px;" onclick="trackEbookClick()">Get the Complete Ebook &mdash; $14.99 &rarr;</a>
       <p class="offer__meta">Secure checkout &bull; Instant download &bull; Available worldwide</p>
     </div>
   </div>
@@ -346,29 +532,68 @@
 
 <footer>
   <p><strong>Kingdom Mindset Co</strong> &mdash; by Rahiem Hickmon</p>
-  <p style="margin-top:8px;">&copy; 2025 Kingdom Mindset Co. All rights reserved.</p>
+  <p style="margin-top:8px;">&copy; 2026 Kingdom Mindset Co. All rights reserved.</p>
+  <p style="margin-top:8px;">Your information is private and never sold &bull; Unsubscribe anytime via email</p>
 </footer>
 
-<script>
-  var PAYHIP_URL = 'https://payhip.com/buy?s=1&cart_links%5B%5D=jd2nJ&qty%5Bjd2nJ%5D=1';
-  var current = 0;
-  var answers = [null, null, null];
 
+<!-- JAVASCRIPT -->
+<script>
+  /* ── PDF URL (hosted permanently) ── */
+  var BLUEPRINT_PDF_URL = 'https://b1d3f806-532e-4ff0-90d3-e7add3625e11.usrfiles.com/ugd/b4cdc1_458a7d3c5e094f88b9078258cd537e39.pdf';
+  var EBOOK_URL = 'https://payhip.com/KingdomMindsetco';
+
+  /* ── Quiz data ── */
   var QS = [
-    { q: "When you think about where you are financially right now, which of these feels most true?",
-      opts: ["I earn money but it disappears too fast — I'm not sure where it goes", "I want to save and invest but I don't know how to start with what I have", "I have a plan but I don't stay consistent with it", "I know the right things to do financially — I just don't do them"] },
-    { q: "When it comes to your sense of purpose and direction in life right now, which is closest to where you are?",
-      opts: ["I know what I'm supposed to be doing but I haven't fully stepped into it yet", "I'm still figuring out what my purpose actually is", "I have a clear direction but something keeps pulling me off course", "I go through seasons where purpose feels clear and seasons where it completely disappears"] },
-    { q: "How does your faith show up — or struggle to show up — in your everyday decisions?",
-      opts: ["I believe deeply but my daily habits don't always reflect what I believe", "My faith feels strong in church or prayer but disconnected from my work and money decisions", "I want my life to be more aligned with my values but I'm not sure how to close that gap", "I'm still working out what I actually believe and what that means for how I live"] }
+    {
+      q: "When you think about where you are financially right now, which of these feels most true?",
+      opts: [
+        "I earn money but it disappears too fast — I'm not sure where it goes",
+        "I want to save and invest but I don't know how to start with what I have",
+        "I have a plan but I don't stay consistent with it",
+        "I know the right things to do financially — I just don't do them"
+      ]
+    },
+    {
+      q: "When it comes to your sense of purpose and direction in life right now, which is closest to where you are?",
+      opts: [
+        "I know what I'm supposed to be doing but I haven't fully stepped into it yet",
+        "I'm still figuring out what my purpose actually is",
+        "I have a clear direction but something keeps pulling me off course",
+        "I go through seasons where purpose feels clear and seasons where it completely disappears"
+      ]
+    },
+    {
+      q: "How does your faith show up — or struggle to show up — in your everyday decisions?",
+      opts: [
+        "I believe deeply but my daily habits don't always reflect what I believe",
+        "My faith feels strong in church or prayer but disconnected from my work and money decisions",
+        "I want my life to be more aligned with my values but I'm not sure how to close that gap",
+        "I'm still working out what I actually believe and what that means for how I live"
+      ]
+    }
   ];
 
   var RESULTS = {
-    financial: { name: "Financial Mindset & Stewardship", body: "Money is one of the most practical tests of how we think. Your answers suggest that the gap between what you know and what you do is where your growth lives right now. This book addresses that gap directly.", actions: [{ label: "What to focus on first", text: "Start with the chapter on decision-making. Most financial struggles are not about money — they are about the thinking that happens before the money moves." }, { label: "The mindset shift that changes everything", text: "Stewardship is not restriction. It is alignment. When your money decisions match your values, everything else becomes clearer." }] },
-    purpose:    { name: "Purpose & Direction",            body: "You are in a season where clarity matters more than speed. The answers you gave suggest you know more than you think — you just need the right framework to act on it.", actions: [{ label: "What to focus on first", text: "Purpose is not found by waiting for a revelation. It is clarified through action. Every step toward something meaningful reveals more than reflection alone." }, { label: "The mindset shift that changes everything", text: "Direction is not a destination. It is a posture. This book will help you find yours." }] },
-    faith:      { name: "Faith & Personal Growth",        body: "You sense a gap between what you believe and how you live. That awareness is itself a sign of growth. This book was written for exactly that tension.", actions: [{ label: "What to focus on first", text: "Start with the chapters on intentional living and daily habits. Faith becomes practical when it shapes the small decisions, not just the big ones." }, { label: "The mindset shift that changes everything", text: "Integration is the goal — not just believing differently, but living differently because of what you believe." }] }
+    financial: {
+      name: "Financial Mindset & Stewardship",
+      teaser: "Your answers point to the gap between what you know financially and what you consistently do — your blueprint will meet you right there."
+    },
+    purpose: {
+      name: "Purpose & Direction",
+      teaser: "You're in a season where clarity matters more than speed. Your blueprint gives you a daily framework to move forward with intention."
+    },
+    faith: {
+      name: "Faith & Personal Growth",
+      teaser: "You sense a gap between what you believe and how you live. Your blueprint addresses that tension every single morning and evening."
+    }
   };
 
+  var current = 0;
+  var answers = [null, null, null];
+  var detectedArea = 'purpose';
+
+  /* ── Quiz rendering ── */
   function renderStep() {
     var q = QS[current];
     document.getElementById('quiz-q').textContent = q.q;
@@ -394,44 +619,125 @@
 
   function quizNext() {
     if (answers[current] === null) return;
-    if (current < 2) {
-      current++;
-      renderStep();
-    } else {
-      showCapture();
-    }
+    if (current < 2) { current++; renderStep(); }
+    else { completeQuiz(); }
   }
 
   function quizBack() {
     if (current > 0) { current--; renderStep(); }
   }
 
-  function showCapture() {
-    document.getElementById('quiz-box').classList.add('hidden');
-    document.getElementById('capture-box').classList.remove('hidden');
+  function completeQuiz() {
     var counts = { financial: 0, purpose: 0, faith: 0 };
-    if (answers[0] !== null) counts.financial++;
-    if (answers[1] !== null) counts.purpose++;
-    if (answers[2] !== null) counts.faith++;
-    var area = Object.keys(counts).reduce(function(a, b) { return counts[a] >= counts[b] ? a : b; });
-    setTimeout(function() { showResults(area); }, 4000);
+    var keys = Object.keys(counts);
+    answers.forEach(function(_, i) { if (answers[i] !== null) counts[keys[i]]++; });
+    detectedArea = keys.reduce(function(a, b) { return counts[a] >= counts[b] ? a : b; });
+
+    gtag('event', 'assessment_completed', { event_category: 'funnel', event_label: 'mindset_assessment', mindset_area: detectedArea });
+
+    var r = RESULTS[detectedArea] || RESULTS.purpose;
+    document.getElementById('result-teaser-name').textContent = r.name;
+    document.getElementById('result-teaser-body').textContent = r.teaser;
+    document.getElementById('hidden-mindset-area').value = detectedArea;
+
+    document.getElementById('quiz-box').classList.add('hidden');
+    document.getElementById('email-capture-section').style.display = 'block';
+    setTimeout(function() {
+      document.getElementById('email-capture-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 80);
   }
 
-  function showResults(key) {
-    var r = RESULTS[key] || RESULTS.purpose;
-    document.getElementById('results-area-name').textContent = r.name;
-    document.getElementById('results-body').textContent = r.body;
-    var actionsEl = document.getElementById('results-actions');
-    actionsEl.innerHTML = '';
-    r.actions.forEach(function(a) {
-      actionsEl.innerHTML += '<div class="action-card"><div class="action-card__label">' + a.label + '</div><div class="action-card__text">' + a.text + '</div></div>';
+  /* ── Form submission ── */
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    var emailVal = document.getElementById('capture-email').value.trim();
+    if (!emailVal) return;
+
+    var btn = document.getElementById('capture-submit-btn');
+    var errEl = document.getElementById('capture-error');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    errEl.style.display = 'none';
+
+    gtag('event', 'email_submitted', { event_category: 'funnel', event_label: 'blueprint_capture', mindset_area: detectedArea });
+
+    fetch(e.target.action, {
+      method: 'POST',
+      body: new FormData(e.target),
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function(res) {
+      if (res.ok) {
+        showThankYou();
+      } else {
+        res.json().then(function(data) {
+          var msg = data.errors ? data.errors.map(function(err) { return err.message; }).join(', ') : 'Submission failed.';
+          showFormError(msg);
+        }).catch(function() { showFormError(); });
+        btn.disabled = false;
+        btn.textContent = 'SEND ME MY FREE BLUEPRINT \u2192';
+      }
+    })
+    .catch(function() {
+      showFormError('Network error. Please check your connection and try again.');
+      btn.disabled = false;
+      btn.textContent = 'SEND ME MY FREE BLUEPRINT \u2192';
     });
-    document.getElementById('results-section').style.display = 'block';
-    document.getElementById('results-section').classList.remove('hidden');
-    document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function showFormError(msg) {
+    var errEl = document.getElementById('capture-error');
+    errEl.textContent = msg || 'Something went wrong. Please try again.';
+    errEl.style.display = 'block';
+  }
+
+  function showThankYou() {
+    document.getElementById('email-capture-section').style.display = 'none';
+    document.getElementById('thankyou-section').style.display = 'block';
+    document.getElementById('thankyou-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    gtag('event', 'freebie_conversion', { event_category: 'funnel', event_label: 'blueprint_signup', mindset_area: detectedArea });
+  }
+
+  function trackEbookClick() {
+    gtag('event', 'ebook_purchase_click', { event_category: 'funnel', event_label: 'think_better_live_wiser', value: 14.99 });
+  }
+
+  function scrollToAssessment() {
+    document.getElementById('assessment').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   renderStep();
 </script>
+
+<!--
+=============================================================
+FORMSPREE AUTO-RESPONSE EMAIL TEMPLATE
+Copy this into: Formspree Dashboard > Your Form > Settings > Auto-Response
+
+Subject: Your Free Kingdom Mindset Blueprint Is Here
+
+Body:
+---
+Welcome to Kingdom Mindset Co!
+
+Your Daily Mindset Reset & Action Blueprint is ready. Download it here:
+
+https://b1d3f806-532e-4ff0-90d3-e7add3625e11.usrfiles.com/ugd/b4cdc1_458a7d3c5e094f88b9078258cd537e39.pdf
+
+Use it each morning and evening to strengthen your focus, discipline, faith, and intentional decision-making.
+
+Meaningful change isn't built by motivation alone. It's built by making wiser decisions consistently and intentionally.
+
+When you're ready to go deeper, explore Think Better, Live Wiser for $14.99 — our complete guide to biblical wisdom, critical thinking, financial stewardship, and purposeful decision-making.
+
+Get the complete ebook: https://payhip.com/KingdomMindsetco
+
+Keep this blueprint somewhere visible. Return to it every day.
+
+— Rahiem Hickmon
+Kingdom Mindset Co | Faith First. Wisdom Always.
+=============================================================
+-->
+
 </body>
 </html>
