@@ -16,6 +16,7 @@
     gtag('event', 'landing_page_view', { event_category: 'funnel', event_label: 'kingdom_mindset_lp' });
   </script>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
@@ -642,12 +643,18 @@
     }, 80);
   }
 
-  /* ── Form submission via Brevo hosted endpoint ── */
+  /* ── EmailJS config ── */
+  var EJS_SERVICE  = 'service_humc2td';
+  var EJS_TEMPLATE = 'template_2k6ezzd';
+  var EJS_PUBLIC   = '9g0LlZOpeXEelklAC';
+
+  /* ── Form submission via EmailJS ── */
   function handleFormSubmit(e) {
     e.preventDefault();
     var emailVal = document.getElementById('capture-email').value.trim();
     if (!emailVal) return;
 
+    var firstName = document.getElementById('capture-firstname').value.trim() || 'Friend';
     var btn = document.getElementById('capture-submit-btn');
     var errEl = document.getElementById('capture-error');
     btn.disabled = true;
@@ -656,25 +663,18 @@
 
     gtag('event', 'email_submitted', { event_category: 'funnel', event_label: 'blueprint_capture', mindset_area: detectedArea });
 
-    /* Submit to Brevo hosted form endpoint */
-    var formData = new FormData();
-    formData.append('EMAIL', emailVal);
-    formData.append('locale', 'en');
-    formData.append('html_type', 'simple');
-    formData.append('email_address_check', '');
-
-    fetch('https://51cb6546.sibforms.com/serve/MUIFADBgQmnBXY2VZnGfn4teucOeZ-9Tuz3tQ2nlKH4A7R10nDDWj7RAhSOL_PQzI3okwtmmuiJyvCGjAYxpiJoHQcQxe9acrk5sXzug2eBGpQfpmLeTCUtZWhJVysLow96ImypiynQ0SFQkCLroEy4zssNjpCPr15lj6MWBuudtxGq15-fmsNGIV3H9A9u4xsYFMqmEclDhVvrETw==', {
-      method: 'POST',
-      body: formData,
-      mode: 'no-cors'
-    })
+    emailjs.send(EJS_SERVICE, EJS_TEMPLATE, {
+      to_email: emailVal,
+      to_name: firstName,
+      mindset_area: detectedArea
+    }, EJS_PUBLIC)
     .then(function() {
       showThankYou();
-    })
-    .catch(function() {
-      showFormError('Network error. Please check your connection and try again.');
+    }, function(error) {
+      showFormError('Something went wrong. Please try again.');
       btn.disabled = false;
       btn.textContent = 'SEND ME MY FREE BLUEPRINT \u2192';
+      console.error('EmailJS error:', error);
     });
   }
 
